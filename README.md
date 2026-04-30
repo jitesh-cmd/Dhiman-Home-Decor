@@ -1,2 +1,0 @@
-# Dhiman-Home-Decor
-Website
