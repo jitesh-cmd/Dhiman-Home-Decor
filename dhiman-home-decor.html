@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dhiman Home Decor | Custom Furniture & Interior Woodwork</title>
+<meta name="description" content="Dhiman Home Decor – Premium custom furniture, modular kitchen, wardrobes & interior woodwork. Skilled carpenter near you. Quality craftsmanship at affordable pricing.">
+<meta name="keywords" content="carpenter near me, custom furniture, home decor, modular kitchen, interior woodwork, wardrobe design, wood furniture India">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0a0805;
+    --deep: #111009;
+    --brown-dark: #2c1a0e;
+    --brown-mid: #5c3317;
+    --brown-warm: #8b4513;
+    --gold: #c9933a;
+    --gold-light: #e8b96a;
+    --beige: #d4b896;
+    --beige-light: #f0e6d6;
+    --cream: #faf5ee;
+    --white: #ffffff;
+    --glass: rgba(255,255,255,0.04);
+    --glass-border: rgba(201,147,58,0.2);
+    --font-display: 'Cormorant Garamond', serif;
+    --font-body: 'DM Sans', sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--beige-light);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+    cursor: none;
+  }
+
+  /* Custom cursor */
+  .cursor {
+    width: 12px; height: 12px;
+    background: var(--gold);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+    transform: translate(-50%, -50%);
+  }
+  .cursor-ring {
+    width: 36px; height: 36px;
+    border: 1px solid rgba(201,147,58,0.5);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9998;
+    transition: transform 0.35s ease, width 0.2s, height 0.2s;
+    transform: translate(-50%, -50%);
+  }
+
+  /* Nav */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0;
+    z-index: 1000;
+    padding: 24px 60px;
+    display: flex; justify-content: space-between; align-items: center;
+    transition: all 0.4s ease;
+  }
+  nav.scrolled {
+    background: rgba(10,8,5,0.92);
+    backdrop-filter: blur(20px);
+    padding: 16px 60px;
+    border-bottom: 1px solid var(--glass-border);
+  }
+  .logo {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: var(--gold-light);
+    text-decoration: none;
+  }
+  .logo span { color: var(--beige); font-style: italic; font-weight: 300; }
+  .nav-links { display: flex; gap: 40px; list-style: none; }
+  .nav-links a {
+    color: var(--beige);
+    text-decoration: none;
+    font-size: 0.82rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 400;
+    transition: color 0.3s;
+    position: relative;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute; bottom: -4px; left: 0;
+    width: 0; height: 1px;
+    background: var(--gold);
+    transition: width 0.3s ease;
+  }
+  .nav-links a:hover { color: var(--gold-light); }
+  .nav-links a:hover::after { width: 100%; }
+  .nav-cta {
+    background: var(--gold);
+    color: var(--black) !important;
+    padding: 10px 24px;
+    border-radius: 2px;
+    font-weight: 500 !important;
+    letter-spacing: 0.08em !important;
+    transition: background 0.3s, transform 0.2s !important;
+  }
+  .nav-cta:hover { background: var(--gold-light) !important; transform: translateY(-1px); }
+  .nav-cta::after { display: none !important; }
+
+  /* Hamburger */
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+  .hamburger span { width: 26px; height: 1.5px; background: var(--beige); transition: all 0.3s; display: block; }
+
+  /* Hero */
+  #hero {
+    height: 100vh; min-height: 700px;
+    position: relative;
+    display: flex; align-items: center;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(135deg, rgba(10,8,5,0.88) 0%, rgba(44,26,14,0.6) 50%, rgba(10,8,5,0.85) 100%),
+      url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1800&q=80') center/cover no-repeat;
+  }
+  .hero-bg::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: repeating-linear-gradient(
+      0deg, transparent, transparent 2px, rgba(0,0,0,0.03) 2px, rgba(0,0,0,0.03) 4px
+    );
+  }
+  .hero-content {
+    position: relative; z-index: 2;
+    padding: 0 60px;
+    max-width: 820px;
+  }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 10px;
+    border: 1px solid var(--glass-border);
+    background: var(--glass);
+    backdrop-filter: blur(10px);
+    padding: 8px 20px;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 36px;
+    opacity: 0; animation: fadeUp 0.8s 0.3s forwards;
+  }
+  .hero-badge::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: var(--gold);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--gold);
+  }
+  .hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(3.2rem, 7vw, 6.5rem);
+    font-weight: 300;
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+    color: var(--cream);
+    margin-bottom: 12px;
+    opacity: 0; animation: fadeUp 0.9s 0.5s forwards;
+  }
+  .hero-title em { font-style: italic; color: var(--gold-light); }
+  .hero-sub {
+    font-family: var(--font-display);
+    font-size: clamp(1rem, 2vw, 1.35rem);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--beige);
+    letter-spacing: 0.04em;
+    margin-bottom: 24px;
+    opacity: 0; animation: fadeUp 0.9s 0.65s forwards;
+  }
+  .hero-pills {
+    display: flex; flex-wrap: wrap; gap: 10px;
+    margin-bottom: 52px;
+    opacity: 0; animation: fadeUp 0.9s 0.8s forwards;
+  }
+  .pill {
+    padding: 6px 16px;
+    border: 1px solid rgba(201,147,58,0.35);
+    border-radius: 100px;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    background: rgba(201,147,58,0.06);
+  }
+  .hero-btns {
+    display: flex; gap: 20px; flex-wrap: wrap;
+    opacity: 0; animation: fadeUp 0.9s 1s forwards;
+  }
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: #25d366;
+    color: #000;
+    padding: 16px 32px;
+    border-radius: 3px;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    box-shadow: 0 8px 32px rgba(37,211,102,0.25);
+  }
+  .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 14px 40px rgba(37,211,102,0.4); }
+  .btn-secondary {
+    display: inline-flex; align-items: center; gap: 10px;
+    border: 1px solid var(--gold);
+    color: var(--gold-light);
+    padding: 16px 32px;
+    border-radius: 3px;
+    font-size: 0.85rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    backdrop-filter: blur(6px);
+    background: rgba(201,147,58,0.06);
+  }
+  .btn-secondary:hover { background: rgba(201,147,58,0.15); transform: translateY(-3px); }
+
+  .hero-scroll {
+    position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    opacity: 0; animation: fadeUp 1s 1.4s forwards;
+  }
+  .hero-scroll span { font-size: 0.68rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--beige); opacity: 0.6; }
+  .scroll-line { width: 1px; height: 50px; background: linear-gradient(to bottom, var(--gold), transparent); animation: scrollPulse 2s infinite; }
+
+  /* Section base */
+  section { padding: 120px 60px; }
+  .section-label {
+    font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 16px; display: flex; align-items: center; gap: 12px;
+  }
+  .section-label::before { content: ''; width: 30px; height: 1px; background: var(--gold); }
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+    font-weight: 300;
+    line-height: 1.1;
+    color: var(--cream);
+    margin-bottom: 24px;
+  }
+  .section-title em { font-style: italic; color: var(--gold-light); }
+  .divider { width: 60px; height: 2px; background: linear-gradient(to right, var(--gold), transparent); margin-bottom: 48px; }
+
+  /* About */
+  #about {
+    background: linear-gradient(135deg, var(--deep) 0%, var(--brown-dark) 100%);
+    position: relative; overflow: hidden;
+  }
+  #about::before {
+    content: '';
+    position: absolute; top: -200px; right: -200px;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(201,147,58,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .about-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+    max-width: 1200px; margin: 0 auto;
+  }
+  .about-img-wrap {
+    position: relative;
+  }
+  .about-img {
+    width: 100%; height: 500px;
+    object-fit: cover;
+    border-radius: 4px;
+    filter: saturate(0.85) contrast(1.05);
+  }
+  .about-img-frame {
+    position: absolute; inset: -16px -16px 16px 16px;
+    border: 1px solid var(--glass-border);
+    border-radius: 4px;
+    pointer-events: none;
+  }
+  .about-badge-float {
+    position: absolute; bottom: -24px; left: -24px;
+    background: var(--gold);
+    color: var(--black);
+    padding: 24px 28px;
+    border-radius: 4px;
+    font-family: var(--font-display);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  }
+  .about-badge-float .num { font-size: 2.8rem; font-weight: 600; line-height: 1; }
+  .about-badge-float .lbl { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; margin-top: 4px; }
+  .about-text p {
+    font-size: 1.02rem; line-height: 1.85;
+    color: var(--beige); margin-bottom: 24px; font-weight: 300;
+  }
+  .about-highlights {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 40px;
+  }
+  .highlight-item {
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    border-radius: 4px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+  }
+  .highlight-item .icon { font-size: 1.5rem; margin-bottom: 10px; }
+  .highlight-item h4 { font-size: 0.88rem; font-weight: 500; color: var(--gold-light); letter-spacing: 0.05em; }
+  .highlight-item p { font-size: 0.78rem; color: var(--beige); margin-top: 4px; line-height: 1.5; margin-bottom: 0; }
+
+  /* Services */
+  #services { background: var(--black); }
+  .services-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;
+    max-width: 1200px; margin: 0 auto;
+  }
+  .service-card {
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    border-radius: 6px;
+    padding: 40px 36px;
+    backdrop-filter: blur(16px);
+    transition: all 0.4s ease;
+    position: relative; overflow: hidden;
+    cursor: default;
+  }
+  .service-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+    opacity: 0; transition: opacity 0.4s;
+  }
+  .service-card:hover { transform: translateY(-8px); border-color: rgba(201,147,58,0.4); box-shadow: 0 30px 60px rgba(0,0,0,0.4); }
+  .service-card:hover::before { opacity: 1; }
+  .service-icon {
+    width: 56px; height: 56px;
+    background: rgba(201,147,58,0.1);
+    border: 1px solid rgba(201,147,58,0.25);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 28px;
+    transition: all 0.3s;
+  }
+  .service-card:hover .service-icon { background: rgba(201,147,58,0.2); transform: scale(1.05); }
+  .service-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.45rem;
+    font-weight: 400;
+    color: var(--cream);
+    margin-bottom: 12px;
+    letter-spacing: 0.02em;
+  }
+  .service-card p { font-size: 0.87rem; line-height: 1.7; color: var(--beige); font-weight: 300; }
+
+  /* Portfolio */
+  #portfolio { background: var(--deep); }
+  .filter-tabs {
+    display: flex; gap: 12px; flex-wrap: wrap;
+    margin-bottom: 48px;
+  }
+  .filter-btn {
+    padding: 9px 24px;
+    border: 1px solid rgba(201,147,58,0.3);
+    background: transparent;
+    color: var(--beige);
+    border-radius: 100px;
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .filter-btn.active, .filter-btn:hover {
+    background: var(--gold);
+    color: var(--black);
+    border-color: var(--gold);
+  }
+  .gallery-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+    max-width: 1200px; margin: 0 auto;
+  }
+  .gallery-item {
+    position: relative; overflow: hidden; border-radius: 4px;
+    aspect-ratio: 4/3;
+    cursor: pointer;
+  }
+  .gallery-item.tall { grid-row: span 2; aspect-ratio: auto; }
+  .gallery-item img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease, filter 0.4s;
+    filter: saturate(0.8) contrast(1.05);
+  }
+  .gallery-item:hover img { transform: scale(1.08); filter: saturate(1) contrast(1.05); }
+  .gallery-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(10,8,5,0.85) 0%, transparent 60%);
+    opacity: 0; transition: opacity 0.4s;
+    display: flex; align-items: flex-end; padding: 24px;
+  }
+  .gallery-item:hover .gallery-overlay { opacity: 1; }
+  .gallery-overlay span {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    color: var(--cream);
+    letter-spacing: 0.05em;
+  }
+  .gallery-overlay .tag {
+    display: inline-block;
+    font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold-light); font-family: var(--font-body);
+    margin-bottom: 4px;
+  }
+
+  /* Why Choose Us */
+  #why {
+    background: linear-gradient(180deg, var(--brown-dark) 0%, var(--black) 100%);
+    position: relative; overflow: hidden;
+  }
+  .why-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 40px;
+    max-width: 1100px; margin: 0 auto;
+  }
+  .why-item { text-align: center; }
+  .why-num {
+    font-family: var(--font-display);
+    font-size: 4rem;
+    font-weight: 300;
+    color: rgba(201,147,58,0.15);
+    line-height: 1;
+    margin-bottom: -10px;
+    letter-spacing: -0.02em;
+  }
+  .why-icon { font-size: 2rem; margin-bottom: 16px; }
+  .why-item h3 {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-weight: 400;
+    color: var(--cream);
+    margin-bottom: 10px;
+  }
+  .why-item p { font-size: 0.85rem; line-height: 1.7; color: var(--beige); font-weight: 300; }
+
+  /* Testimonials */
+  #testimonials { background: var(--black); }
+  .testi-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px;
+    max-width: 1100px; margin: 0 auto;
+  }
+  .testi-card {
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    padding: 36px;
+    backdrop-filter: blur(12px);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .testi-card:hover { transform: translateY(-5px); box-shadow: 0 20px 50px rgba(0,0,0,0.3); }
+  .stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; margin-bottom: 20px; }
+  .testi-text {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--beige-light);
+    margin-bottom: 24px;
+  }
+  .testi-author { display: flex; align-items: center; gap: 14px; }
+  .testi-avatar {
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--brown-mid), var(--gold));
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    color: var(--cream);
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+  .testi-name { font-size: 0.9rem; font-weight: 500; color: var(--cream); }
+  .testi-loc { font-size: 0.75rem; color: var(--beige); letter-spacing: 0.08em; margin-top: 2px; }
+
+  /* Contact */
+  #contact {
+    background: linear-gradient(135deg, var(--deep) 0%, var(--brown-dark) 100%);
+    position: relative; overflow: hidden;
+  }
+  .contact-grid {
+    display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px;
+    max-width: 1100px; margin: 0 auto; align-items: start;
+  }
+  .contact-info h3 {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: var(--cream);
+    margin-bottom: 32px;
+  }
+  .contact-channels { display: flex; flex-direction: column; gap: 18px; margin-bottom: 48px; }
+  .channel-btn {
+    display: flex; align-items: center; gap: 14px;
+    padding: 16px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    transition: all 0.3s;
+    border: 1px solid transparent;
+  }
+  .channel-btn.whatsapp { background: rgba(37,211,102,0.12); border-color: rgba(37,211,102,0.3); color: #4ade80; }
+  .channel-btn.whatsapp:hover { background: rgba(37,211,102,0.22); transform: translateX(6px); }
+  .channel-btn.gmail { background: rgba(234,67,53,0.1); border-color: rgba(234,67,53,0.25); color: #f87171; }
+  .channel-btn.gmail:hover { background: rgba(234,67,53,0.18); transform: translateX(6px); }
+  .channel-btn.call { background: rgba(201,147,58,0.1); border-color: rgba(201,147,58,0.25); color: var(--gold-light); }
+  .channel-btn.call:hover { background: rgba(201,147,58,0.18); transform: translateX(6px); }
+  .channel-icon { font-size: 1.2rem; width: 28px; text-align: center; }
+  .social-links { display: flex; gap: 14px; margin-top: 32px; }
+  .social-btn {
+    width: 48px; height: 48px;
+    border-radius: 50%;
+    border: 1px solid var(--glass-border);
+    background: var(--glass);
+    display: flex; align-items: center; justify-content: center;
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: var(--beige);
+    transition: all 0.3s;
+    backdrop-filter: blur(8px);
+  }
+  .social-btn:hover { border-color: var(--gold); color: var(--gold-light); transform: translateY(-3px); }
+
+  /* Map placeholder */
+  .map-placeholder {
+    margin-top: 40px;
+    height: 180px;
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    border-radius: 6px;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 8px; color: var(--beige); font-size: 0.85rem;
+    position: relative; overflow: hidden;
+  }
+  .map-placeholder::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: repeating-linear-gradient(
+      45deg, transparent, transparent 10px,
+      rgba(201,147,58,0.03) 10px, rgba(201,147,58,0.03) 20px
+    );
+  }
+  .map-icon { font-size: 2rem; }
+
+  /* Contact Form */
+  .contact-form { display: flex; flex-direction: column; gap: 18px; }
+  .form-group { display: flex; flex-direction: column; gap: 8px; }
+  .form-group label { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-light); }
+  .form-group input, .form-group textarea, .form-group select {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(201,147,58,0.2);
+    border-radius: 4px;
+    padding: 14px 18px;
+    color: var(--cream);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    transition: border-color 0.3s, background 0.3s;
+    outline: none;
+    resize: none;
+  }
+  .form-group input:focus, .form-group textarea:focus {
+    border-color: var(--gold);
+    background: rgba(201,147,58,0.05);
+  }
+  .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(212,184,150,0.4); }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .submit-btn {
+    background: var(--gold);
+    color: var(--black);
+    border: none;
+    padding: 16px 40px;
+    border-radius: 4px;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 8px;
+    align-self: flex-start;
+  }
+  .submit-btn:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(201,147,58,0.3); }
+
+  /* Footer */
+  footer {
+    background: var(--black);
+    border-top: 1px solid var(--glass-border);
+    padding: 60px 60px 30px;
+  }
+  .footer-top {
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px;
+    margin-bottom: 60px;
+  }
+  .footer-brand .logo { display: block; margin-bottom: 12px; font-size: 1.6rem; }
+  .footer-tagline {
+    font-family: var(--font-display);
+    font-style: italic;
+    color: var(--beige);
+    font-size: 1rem;
+    margin-bottom: 16px;
+  }
+  .footer-desc { font-size: 0.82rem; line-height: 1.7; color: rgba(212,184,150,0.6); font-weight: 300; }
+  .footer-col h4 {
+    font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 20px;
+  }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-col ul a {
+    color: rgba(212,184,150,0.65); font-size: 0.85rem;
+    text-decoration: none; transition: color 0.3s;
+  }
+  .footer-col ul a:hover { color: var(--gold-light); }
+  .footer-bottom {
+    display: flex; justify-content: space-between; align-items: center;
+    padding-top: 24px; border-top: 1px solid rgba(201,147,58,0.1);
+    font-size: 0.75rem; color: rgba(212,184,150,0.4);
+  }
+
+  /* WhatsApp Float */
+  .wa-float {
+    position: fixed; bottom: 32px; right: 32px;
+    width: 58px; height: 58px;
+    background: #25d366;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.6rem;
+    text-decoration: none;
+    box-shadow: 0 8px 30px rgba(37,211,102,0.4);
+    z-index: 900;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: pulse-wa 3s infinite;
+  }
+  .wa-float:hover { transform: scale(1.1); box-shadow: 0 12px 40px rgba(37,211,102,0.6); }
+  .wa-tooltip {
+    position: absolute; right: 68px; top: 50%; transform: translateY(-50%);
+    background: var(--deep); border: 1px solid var(--glass-border);
+    color: var(--cream); font-size: 0.78rem; white-space: nowrap;
+    padding: 8px 14px; border-radius: 4px;
+    opacity: 0; pointer-events: none; transition: opacity 0.3s;
+    backdrop-filter: blur(10px);
+  }
+  .wa-float:hover .wa-tooltip { opacity: 1; }
+
+  /* Animations */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes scrollPulse {
+    0%, 100% { opacity: 1; } 50% { opacity: 0.3; }
+  }
+  @keyframes pulse-wa {
+    0%, 100% { box-shadow: 0 8px 30px rgba(37,211,102,0.4); }
+    50% { box-shadow: 0 8px 50px rgba(37,211,102,0.7), 0 0 0 12px rgba(37,211,102,0.08); }
+  }
+
+  .fade-in-up {
+    opacity: 0; transform: translateY(40px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .fade-in-up.visible { opacity: 1; transform: translateY(0); }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    nav { padding: 20px 30px; }
+    nav.scrolled { padding: 14px 30px; }
+    section { padding: 80px 30px; }
+    .hero-content { padding: 0 30px; }
+    .about-grid { grid-template-columns: 1fr; gap: 60px; }
+    .about-img-wrap { order: -1; }
+    .about-img { height: 380px; }
+    .contact-grid { grid-template-columns: 1fr; gap: 50px; }
+    .footer-top { grid-template-columns: 1fr 1fr; gap: 40px; }
+    .gallery-grid { grid-template-columns: repeat(2,1fr); }
+  }
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .nav-links.open {
+      display: flex; flex-direction: column;
+      position: fixed; inset: 0; background: rgba(10,8,5,0.97);
+      backdrop-filter: blur(20px);
+      align-items: center; justify-content: center; gap: 32px;
+      z-index: 999;
+    }
+    .nav-links.open a { font-size: 1.2rem; }
+    .gallery-grid { grid-template-columns: 1fr 1fr; }
+    .gallery-item.tall { grid-row: span 1; aspect-ratio: 4/3; }
+    .form-row { grid-template-columns: 1fr; }
+    .footer-top { grid-template-columns: 1fr; }
+    .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
+    .hero-btns { flex-direction: column; }
+    .btn-primary, .btn-secondary { justify-content: center; }
+    body { cursor: auto; }
+    .cursor, .cursor-ring { display: none; }
+  }
+  @media (max-width: 480px) {
+    .gallery-grid { grid-template-columns: 1fr; }
+    .hero-title { font-size: 2.8rem; }
+    .about-highlights { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Custom cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="logo">Dhiman <span>Home Decor</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+    <li><a href="#contact" class="nav-cta">Get Quote</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-badge">✦ Premium Woodcraft Since 2010</div>
+    <h1 class="hero-title">Crafting Your<br><em>Dream Interiors</em></h1>
+    <p class="hero-sub">Turning Wood into Art — One Home at a Time</p>
+    <div class="hero-pills">
+      <span class="pill">Custom Furniture</span>
+      <span class="pill">Modular Kitchen</span>
+      <span class="pill">Interior Woodwork</span>
+    </div>
+    <div class="hero-btns">
+      <a href="https://wa.me/919999999999?text=Hello!%20I'm%20interested%20in%20your%20woodwork%20services." target="_blank" class="btn-primary">
+        <span>💬</span> Contact on WhatsApp
+      </a>
+      <a href="#portfolio" class="btn-secondary">
+        <span>🪵</span> View Our Designs
+      </a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-img-wrap fade-in-up">
+      <img src="https://images.unsplash.com/photo-1597075687490-8f673c6c17f6?w=800&q=80" alt="Master Carpenter at work" class="about-img">
+      <div class="about-img-frame"></div>
+      <div class="about-badge-float">
+        <div class="num">12+</div>
+        <div class="lbl">Years of Craft</div>
+      </div>
+    </div>
+    <div class="about-text fade-in-up">
+      <div class="section-label">Our Story</div>
+      <h2 class="section-title">Born from Passion,<br><em>Built with Precision</em></h2>
+      <div class="divider"></div>
+      <p>Dhiman Home Decor was founded with one simple belief — that every home deserves furniture as unique as the family living in it. With over a decade of hands-on experience, we blend traditional craftsmanship with modern design sensibilities.</p>
+      <p>From raw timber to finished masterpiece, every piece we create carries the mark of genuine skill. We personally oversee each project, ensuring quality that stands the test of time — and looks stunning doing it.</p>
+      <div class="about-highlights">
+        <div class="highlight-item">
+          <div class="icon">🔨</div>
+          <h4>Handcrafted Quality</h4>
+          <p>Every joint, edge and finish done by skilled hands</p>
+        </div>
+        <div class="highlight-item">
+          <div class="icon">✏️</div>
+          <h4>Custom Designs</h4>
+          <p>Your vision, your space — designed exactly for you</p>
+        </div>
+        <div class="highlight-item">
+          <div class="icon">💰</div>
+          <h4>Affordable Pricing</h4>
+          <p>Premium quality without the premium price tag</p>
+        </div>
+        <div class="highlight-item">
+          <div class="icon">🏆</div>
+          <h4>500+ Projects Done</div>
+          <p>Happy clients across Delhi NCR & beyond</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div style="max-width:1200px; margin:0 auto;">
+    <div class="section-label">What We Offer</div>
+    <h2 class="section-title">Our <em>Services</em></h2>
+    <div class="divider"></div>
+    <div class="services-grid">
+      <div class="service-card fade-in-up">
+        <div class="service-icon">🪑</div>
+        <h3>Custom Furniture</h3>
+        <p>Sofas, beds, dining sets, coffee tables — crafted to your exact measurements and style preferences. No two pieces are ever the same.</p>
+      </div>
+      <div class="service-card fade-in-up">
+        <div class="service-icon">🍳</div>
+        <h3>Modular Kitchen</h3>
+        <p>Functional, beautiful modular kitchens with premium shutters, soft-close hardware, and efficient storage solutions designed for Indian homes.</p>
+      </div>
+      <div class="service-card fade-in-up">
+        <div class="service-icon">🚪</div>
+        <h3>Wardrobes & Cabinets</h3>
+        <p>Walk-in wardrobes, sliding door wardrobes, TV units and wall cabinets built for maximum storage with a sleek, modern finish.</p>
+      </div>
+      <div class="service-card fade-in-up">
+        <div class="service-icon">🏠</div>
+        <h3>Interior Woodwork</h3>
+        <p>False ceilings, wall panelling, partition work, and complete interior fit-outs that transform ordinary rooms into extraordinary spaces.</p>
+      </div>
+      <div class="service-card fade-in-up">
+        <div class="service-icon">✨</div>
+        <h3>Repair & Polishing</h3>
+        <p>Restore your old furniture to its former glory. Professional wood polishing, PU finish, lacquering and structural repairs done right.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+  <div style="max-width:1200px; margin:0 auto;">
+    <div class="section-label">Our Work</div>
+    <h2 class="section-title">Portfolio <em>Gallery</em></h2>
+    <div class="divider"></div>
+    <div class="filter-tabs">
+      <button class="filter-btn active" onclick="filterGallery('all',this)">All Work</button>
+      <button class="filter-btn" onclick="filterGallery('furniture',this)">Furniture</button>
+      <button class="filter-btn" onclick="filterGallery('kitchen',this)">Kitchen</button>
+      <button class="filter-btn" onclick="filterGallery('wardrobe',this)">Wardrobe</button>
+      <button class="filter-btn" onclick="filterGallery('decor',this)">Decor</button>
+    </div>
+    <div class="gallery-grid" id="galleryGrid">
+      <div class="gallery-item tall" data-cat="furniture">
+        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80" alt="Custom Sofa Set">
+        <div class="gallery-overlay"><div><div class="tag">Furniture</div><span>Custom Sofa Set</span></div></div>
+      </div>
+      <div class="gallery-item" data-cat="kitchen">
+        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80" alt="Modular Kitchen">
+        <div class="gallery-overlay"><div><div class="tag">Kitchen</div><span>Modular Kitchen</span></div></div>
+      </div>
+      <div class="gallery-item" data-cat="wardrobe">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Walk-in Wardrobe">
+        <div class="gallery-overlay"><div><div class="tag">Wardrobe</div><span>Walk-in Wardrobe</span></div></div>
+      </div>
+      <div class="gallery-item" data-cat="decor">
+        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=80" alt="Living Room Decor">
+        <div class="gallery-overlay"><div><div class="tag">Decor</div><span>Living Room Panel</span></div></div>
+      </div>
+      <div class="gallery-item" data-cat="furniture">
+        <img src="https://images.unsplash.com/photo-1567016432779-094069958ea5?w=600&q=80" alt="Dining Set">
+        <div class="gallery-overlay"><div><div class="tag">Furniture</div><span>Dining Set</span></div></div>
+      </div>
+      <div class="gallery-item" data-cat="kitchen">
+        <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=80" alt="Kitchen Interior">
+        <div class="gallery-overlay"><div><div class="tag">Kitchen</div><span>Kitchen Interior</span></div></div>
+      </div>
+      <div class="gallery-item" data-cat="wardrobe">
+        <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=600&q=80" alt="Bedroom Wardrobe">
+        <div class="gallery-overlay"><div><div class="tag">Wardrobe</div><span>Bedroom Wardrobe</span></div></div>
+      </div>
+      <div class="gallery-item" data-cat="decor">
+        <img src="https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?w=600&q=80" alt="Wood Panel Wall">
+        <div class="gallery-overlay"><div><div class="tag">Decor</div><span>Wood Panel Wall</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section id="why">
+  <div style="max-width:1100px; margin:0 auto; text-align:center;">
+    <div class="section-label" style="justify-content:center;">Why Dhiman</div>
+    <h2 class="section-title" style="max-width:600px; margin:0 auto 24px;">Why Clients <em>Choose Us</em></h2>
+    <div class="divider" style="margin:0 auto 60px;"></div>
+    <div class="why-grid">
+      <div class="why-item fade-in-up">
+        <div class="why-num">01</div>
+        <div class="why-icon">🔧</div>
+        <h3>Skilled Craftsmanship</h3>
+        <p>12+ years of hands-on woodworking experience. We don't just build furniture — we craft heirlooms.</p>
+      </div>
+      <div class="why-item fade-in-up">
+        <div class="why-num">02</div>
+        <div class="why-icon">💎</div>
+        <h3>Premium Materials</h3>
+        <p>Only top-grade plywood, MDF, solid wood and hardware. No compromises on what goes into your home.</p>
+      </div>
+      <div class="why-item fade-in-up">
+        <div class="why-num">03</div>
+        <div class="why-icon">🎨</div>
+        <h3>Fully Custom Designs</h3>
+        <p>From concept to creation, every design is built around your space, your taste and your budget.</p>
+      </div>
+      <div class="why-item fade-in-up">
+        <div class="why-num">04</div>
+        <div class="why-icon">⏰</div>
+        <h3>On-Time Delivery</h3>
+        <p>We respect your timeline. Projects are completed on schedule — every single time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div style="max-width:1100px; margin:0 auto;">
+    <div class="section-label">Client Stories</div>
+    <h2 class="section-title">What Our Clients <em>Say</em></h2>
+    <div class="divider"></div>
+    <div class="testi-grid">
+      <div class="testi-card fade-in-up">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">"Dhiman ji transformed our entire living room. The sofa set and TV unit look absolutely stunning — exactly what we imagined, maybe better. Highly recommended!"</p>
+        <div class="testi-author">
+          <div class="testi-avatar">R</div>
+          <div>
+            <div class="testi-name">Ranjit Mehra</div>
+            <div class="testi-loc">📍 Rohini, Delhi</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card fade-in-up">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">"Got my modular kitchen done last month. The quality is excellent and pricing was very fair. Work was completed on time without any mess. Will definitely call again!"</p>
+        <div class="testi-author">
+          <div class="testi-avatar">P</div>
+          <div>
+            <div class="testi-name">Priya Sharma</div>
+            <div class="testi-loc">📍 Dwarka, Delhi</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card fade-in-up">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">"Best carpenter in the area, no doubt. My walk-in wardrobe is a dream — every detail is perfect. True artisan. Trust them with your eyes closed."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">A</div>
+          <div>
+            <div class="testi-name">Amit Chaudhary</div>
+            <div class="testi-loc">📍 Noida Sector 62</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card fade-in-up">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">"We renovated the entire apartment with Dhiman Home Decor. From kitchen to bedrooms — everything is top class. Great communication and flawless execution."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">S</div>
+          <div>
+            <div class="testi-name">Sunita & Ramesh</div>
+            <div class="testi-loc">📍 Gurgaon</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card fade-in-up">
+        <div class="stars">★★★★☆</div>
+        <p class="testi-text">"Got old furniture repaired and polished. It looks brand new now! Very reasonable charges and the work was done neatly. Genuinely happy with the service."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">V</div>
+          <div>
+            <div class="testi-name">Vivek Rathore</div>
+            <div class="testi-loc">📍 Pitampura, Delhi</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-grid">
+    <div class="contact-info fade-in-up">
+      <div class="section-label">Reach Out</div>
+      <h2 class="section-title">Let's Build Something <em>Beautiful</em></h2>
+      <div class="divider"></div>
+      <h3>Get in touch via your preferred channel:</h3>
+      <div class="contact-channels">
+        <a href="https://wa.me/919999999999?text=Hi!%20I'd%20like%20a%20quote%20for%20my%20home%20project." target="_blank" class="channel-btn whatsapp">
+          <span class="channel-icon">💬</span>
+          <div>
+            <div style="font-weight:500;">WhatsApp Chat</div>
+            <div style="font-size:0.75rem;opacity:0.7;margin-top:2px;">+91 99999 99999 — instant reply</div>
+          </div>
+        </a>
+        <a href="mailto:dhimanhomedeocr@gmail.com" class="channel-btn gmail">
+          <span class="channel-icon">✉️</span>
+          <div>
+            <div style="font-weight:500;">Send Email</div>
+            <div style="font-size:0.75rem;opacity:0.7;margin-top:2px;">dhimanhomedeocr@gmail.com</div>
+          </div>
+        </a>
+        <a href="tel:+919999999999" class="channel-btn call">
+          <span class="channel-icon">📞</span>
+          <div>
+            <div style="font-weight:500;">Call Us Directly</div>
+            <div style="font-size:0.75rem;opacity:0.7;margin-top:2px;">+91 99999 99999</div>
+          </div>
+        </a>
+      </div>
+      <div class="social-links">
+        <a href="https://instagram.com" target="_blank" class="social-btn" title="Instagram">📸</a>
+        <a href="https://facebook.com" target="_blank" class="social-btn" title="Facebook">👥</a>
+        <a href="https://wa.me/919999999999" target="_blank" class="social-btn" title="WhatsApp">💬</a>
+      </div>
+      <div class="map-placeholder">
+        <div class="map-icon">📍</div>
+        <div style="font-weight:500; color:var(--beige-light);">Dhiman Home Decor Workshop</div>
+        <div style="font-size:0.78rem; opacity:0.6;">Delhi NCR — Serving Pan Delhi, Noida, Gurgaon</div>
+        <div style="font-size:0.75rem; color:var(--gold); margin-top:6px; position:relative; z-index:1;">Click to open in Maps ↗</div>
+      </div>
+    </div>
+    <div class="fade-in-up">
+      <div style="background:var(--glass); border:1px solid var(--glass-border); border-radius:8px; padding:44px; backdrop-filter:blur(16px);">
+        <h3 style="font-family:var(--font-display); font-size:1.6rem; font-weight:400; color:var(--cream); margin-bottom:8px;">Send a Message</h3>
+        <p style="font-size:0.83rem; color:var(--beige); margin-bottom:32px; font-weight:300;">We'll get back to you within a few hours.</p>
+        <form class="contact-form" onsubmit="handleForm(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Your Name</label>
+              <input type="text" placeholder="Rajesh Kumar" required>
+            </div>
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" placeholder="+91 98765 43210" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Service Required</label>
+            <select style="background:rgba(255,255,255,0.04); border:1px solid rgba(201,147,58,0.2); border-radius:4px; padding:14px 18px; color:var(--cream); font-family:var(--font-body); font-size:0.9rem; outline:none; width:100%;">
+              <option value="" style="background:#111;">Select a service...</option>
+              <option value="furniture" style="background:#111;">Custom Furniture</option>
+              <option value="kitchen" style="background:#111;">Modular Kitchen</option>
+              <option value="wardrobe" style="background:#111;">Wardrobe & Cabinets</option>
+              <option value="interior" style="background:#111;">Interior Woodwork</option>
+              <option value="repair" style="background:#111;">Repair & Polishing</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Your Message</label>
+            <textarea rows="5" placeholder="Tell us about your project — dimensions, materials, budget range, location..."></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Send Enquiry →</button>
+        </form>
+        <div id="formSuccess" style="display:none; background:rgba(37,211,102,0.1); border:1px solid rgba(37,211,102,0.3); border-radius:6px; padding:20px; margin-top:20px; color:#4ade80; font-size:0.9rem; text-align:center;">
+          ✅ Message sent! We'll contact you within a few hours.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="#" class="logo">Dhiman <span>Home Decor</span></a>
+      <p class="footer-tagline">"Turning Wood into Art"</p>
+      <p class="footer-desc">Premium custom furniture and interior woodwork for homes across Delhi NCR. Every piece crafted with passion, precision and pride.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Custom Furniture</a></li>
+        <li><a href="#services">Modular Kitchen</a></li>
+        <li><a href="#services">Wardrobes</a></li>
+        <li><a href="#services">Interior Woodwork</a></li>
+        <li><a href="#services">Repair & Polish</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+919999999999">📞 +91 99999 99999</a></li>
+        <li><a href="https://wa.me/919999999999" target="_blank">💬 WhatsApp</a></li>
+        <li><a href="mailto:dhimanhomedeocr@gmail.com">✉️ Email Us</a></li>
+        <li><a href="https://instagram.com" target="_blank">📸 Instagram</a></li>
+        <li><a href="https://facebook.com" target="_blank">👥 Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Dhiman Home Decor. All rights reserved.</span>
+    <span>Carpenter Near Me | Custom Furniture Delhi | Modular Kitchen NCR</span>
+  </div>
+</footer>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/919999999999?text=Hello!%20I'm%20interested%20in%20your%20woodwork%20services." target="_blank" class="wa-float">
+  💬
+  <span class="wa-tooltip">Chat on WhatsApp</span>
+</a>
+
+<script>
+  // Cursor
+  const cursor = document.getElementById('cursor');
+  const ring = document.getElementById('cursorRing');
+  let mx=0, my=0, rx=0, ry=0;
+  document.addEventListener('mousemove', e => { mx=e.clientX; my=e.clientY; cursor.style.left=mx+'px'; cursor.style.top=my+'px'; });
+  function animRing(){rx+=(mx-rx)*0.12; ry+=(my-ry)*0.12; ring.style.left=rx+'px'; ring.style.top=ry+'px'; requestAnimationFrame(animRing);}
+  animRing();
+  document.querySelectorAll('a,button,.gallery-item,.service-card').forEach(el => {
+    el.addEventListener('mouseenter', () => { cursor.style.transform='translate(-50%,-50%) scale(2)'; ring.style.width='60px'; ring.style.height='60px'; });
+    el.addEventListener('mouseleave', () => { cursor.style.transform='translate(-50%,-50%) scale(1)'; ring.style.width='36px'; ring.style.height='36px'; });
+  });
+
+  // Nav scroll
+  const nav = document.getElementById('navbar');
+  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); });
+
+  // Menu toggle
+  function toggleMenu(){
+    const nl = document.getElementById('navLinks');
+    nl.classList.toggle('open');
+  }
+  document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open')));
+
+  // Scroll animations
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); } });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.fade-in-up').forEach(el => obs.observe(el));
+
+  // Gallery filter
+  function filterGallery(cat, btn) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.gallery-item').forEach(item => {
+      const show = cat === 'all' || item.dataset.cat === cat;
+      item.style.opacity = show ? '1' : '0.15';
+      item.style.transform = show ? 'scale(1)' : 'scale(0.95)';
+      item.style.transition = 'all 0.4s ease';
+      item.style.pointerEvents = show ? 'all' : 'none';
+    });
+  }
+
+  // Form submit
+  function handleForm(e) {
+    e.preventDefault();
+    document.getElementById('formSuccess').style.display='block';
+    e.target.style.display='none';
+  }
+</script>
+</body>
+</html>
