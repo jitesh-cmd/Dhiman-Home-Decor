@@ -64,14 +64,15 @@
   /* Nav */
   nav {
     position: fixed; top: 0; left: 0; right: 0;
-    z-index: 1000;
+    z-index: 2000;
     padding: 24px 60px;
     display: flex; justify-content: space-between; align-items: center;
     transition: all 0.4s ease;
   }
   nav.scrolled {
-    background: rgba(10,8,5,0.92);
+    background: rgba(10,8,5,0.95);
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     padding: 16px 60px;
     border-bottom: 1px solid var(--glass-border);
   }
@@ -82,6 +83,8 @@
     letter-spacing: 0.05em;
     color: var(--gold-light);
     text-decoration: none;
+    position: relative;
+    z-index: 2200;
   }
   .logo span { color: var(--beige); font-style: italic; font-weight: 300; }
   .nav-links { display: flex; gap: 40px; list-style: none; }
@@ -117,8 +120,105 @@
   .nav-cta::after { display: none !important; }
 
   /* Hamburger */
-  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
-  .hamburger span { width: 26px; height: 1.5px; background: var(--beige); transition: all 0.3s; display: block; }
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    cursor: pointer;
+    width: 44px; height: 44px;
+    padding: 8px;
+    border-radius: 4px;
+    position: relative;
+    z-index: 2200;
+    background: transparent;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .hamburger span {
+    width: 24px; height: 1.5px;
+    background: var(--beige);
+    transition: all 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+    display: block;
+    transform-origin: center;
+  }
+  /* Hamburger → X animation */
+  .hamburger.active span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); background: var(--gold-light); }
+  .hamburger.active span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+  .hamburger.active span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); background: var(--gold-light); }
+
+  /* Mobile menu overlay — separate from nav */
+  #mobileMenu {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 2100;
+    background: rgba(10,8,5,0.97);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+  }
+  #mobileMenu.open {
+    display: flex;
+    opacity: 1;
+  }
+  #mobileMenu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 0;
+    width: 100%;
+  }
+  #mobileMenu ul li { width: 100%; text-align: center; }
+  #mobileMenu ul a {
+    display: block;
+    padding: 18px 24px;
+    color: var(--beige-light);
+    text-decoration: none;
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    transition: color 0.2s;
+    border-bottom: 1px solid rgba(201,147,58,0.08);
+  }
+  #mobileMenu ul a:hover, #mobileMenu ul a:active { color: var(--gold-light); }
+  #mobileMenu .mobile-cta {
+    margin-top: 32px;
+    background: var(--gold);
+    color: var(--black) !important;
+    padding: 16px 48px !important;
+    border-radius: 4px;
+    font-family: var(--font-body) !important;
+    font-size: 0.9rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.1em !important;
+    display: inline-block;
+    border-bottom: none !important;
+  }
+  #mobileMenu .mobile-social {
+    display: flex; gap: 20px; margin-top: 36px;
+  }
+  #mobileMenu .mobile-social a {
+    width: 48px; height: 48px;
+    border-radius: 50%;
+    border: 1px solid var(--glass-border);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem;
+    color: var(--beige);
+    text-decoration: none;
+    padding: 0 !important;
+    border-bottom: 1px solid var(--glass-border) !important;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  #mobileMenu .mobile-social a:hover { border-color: var(--gold); color: var(--gold-light); }
 
   /* Hero */
   #hero {
@@ -705,16 +805,12 @@
     .gallery-grid { grid-template-columns: repeat(2,1fr); }
   }
   @media (max-width: 768px) {
-    .nav-links { display: none; }
+    nav { padding: 16px 20px; }
+    nav.scrolled { padding: 14px 20px; }
+    .nav-links { display: none !important; } /* always hidden on mobile — use #mobileMenu instead */
     .hamburger { display: flex; }
-    .nav-links.open {
-      display: flex; flex-direction: column;
-      position: fixed; inset: 0; background: rgba(10,8,5,0.97);
-      backdrop-filter: blur(20px);
-      align-items: center; justify-content: center; gap: 32px;
-      z-index: 999;
-    }
-    .nav-links.open a { font-size: 1.2rem; }
+    section { padding: 70px 20px; }
+    .hero-content { padding: 0 20px; }
     .gallery-grid { grid-template-columns: 1fr 1fr; }
     .gallery-item.tall { grid-row: span 1; aspect-ratio: 4/3; }
     .form-row { grid-template-columns: 1fr; }
@@ -729,6 +825,8 @@
     .gallery-grid { grid-template-columns: 1fr; }
     .hero-title { font-size: 2.8rem; }
     .about-highlights { grid-template-columns: 1fr; }
+    footer { padding: 50px 20px 24px; }
+    .footer-bottom { font-size: 0.7rem; }
   }
 </style>
 </head>
@@ -748,10 +846,26 @@
     <li><a href="#testimonials">Reviews</a></li>
     <li><a href="#contact" class="nav-cta">Get Quote</a></li>
   </ul>
-  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+  <div class="hamburger" id="hamburger">
     <span></span><span></span><span></span>
   </div>
 </nav>
+
+<!-- MOBILE MENU OVERLAY -->
+<div id="mobileMenu" role="dialog" aria-label="Navigation menu">
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+    <li><a href="#contact" class="mobile-cta">Get a Quote</a></li>
+  </ul>
+  <div class="mobile-social">
+    <a href="https://wa.me/919999999999" target="_blank" title="WhatsApp">💬</a>
+    <a href="https://instagram.com" target="_blank" title="Instagram">📸</a>
+    <a href="https://facebook.com" target="_blank" title="Facebook">👥</a>
+  </div>
+</div>
 
 <!-- HERO -->
 <section id="hero">
@@ -1145,7 +1259,7 @@
 </a>
 
 <script>
-  // Cursor
+  // Custom cursor (desktop only)
   const cursor = document.getElementById('cursor');
   const ring = document.getElementById('cursorRing');
   let mx=0, my=0, rx=0, ry=0;
@@ -1161,17 +1275,58 @@
   const nav = document.getElementById('navbar');
   window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); });
 
-  // Menu toggle
-  function toggleMenu(){
-    const nl = document.getElementById('navLinks');
-    nl.classList.toggle('open');
+  // ── Mobile Menu ──────────────────────────────────────────
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  let menuOpen = false;
+
+  function openMenu() {
+    menuOpen = true;
+    hamburger.classList.add('active');
+    mobileMenu.style.display = 'flex';
+    // Force reflow for transition
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => { mobileMenu.classList.add('open'); });
+    });
+    document.body.style.overflow = 'hidden';
   }
-  document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open')));
+
+  function closeMenu() {
+    menuOpen = false;
+    hamburger.classList.remove('active');
+    mobileMenu.classList.remove('open');
+    document.body.style.overflow = '';
+    // Hide after transition ends
+    setTimeout(() => {
+      if (!menuOpen) mobileMenu.style.display = 'none';
+    }, 360);
+  }
+
+  hamburger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    menuOpen ? closeMenu() : openMenu();
+  });
+
+  // Close when any nav link is tapped
+  mobileMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => closeMenu());
+  });
+
+  // Close on outside tap (tapping the dark overlay area)
+  mobileMenu.addEventListener('click', (e) => {
+    if (e.target === mobileMenu) closeMenu();
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && menuOpen) closeMenu();
+  });
+  // ─────────────────────────────────────────────────────────
 
   // Scroll animations
   const obs = new IntersectionObserver((entries) => {
     entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); } });
-  }, { threshold: 0.15 });
+  }, { threshold: 0.12 });
   document.querySelectorAll('.fade-in-up').forEach(el => obs.observe(el));
 
   // Gallery filter
