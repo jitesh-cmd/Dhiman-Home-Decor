@@ -1285,6 +1285,15 @@ footer {
 .wa-float:hover .wa-tooltip {
     opacity: 1;
 }
+select {
+  background: rgba(255,255,255,0.04);
+  color: #fff;
+}
+
+select option {
+  background: #111 !important;
+  color: #fff !important;
+}
 
 /* Animations */
 @keyframes fadeUp {

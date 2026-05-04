@@ -1,454 +1,699 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Dhiman Home Decor</title>
+  <title>Dhiman Home Decor</title>
 
-<link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=DM+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=DM+Sans&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- Custom cursor -->
-<div class="cursor" id="cursor"></div>
-<div class="cursor-ring" id="cursorRing"></div>
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
 
-<!-- NAV -->
-<nav id="navbar">
-  <a href="#" class="logo">Dhiman <span>Home Decor</span></a>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="#about">About</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#portfolio">Portfolio</a></li>
-    <li><a href="#testimonials">Reviews</a></li>
-    <li><a href="#contact" class="nav-cta">Get Quote</a></li>
-  </ul>
-  <div class="hamburger" id="hamburger">
-    <span></span><span></span><span></span>
-  </div>
-</nav>
-
-<!-- MOBILE MENU OVERLAY -->
-<div id="mobileMenu" role="dialog" aria-label="Navigation menu">
-  <ul>
-    <li><a href="#about">About</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#portfolio">Portfolio</a></li>
-    <li><a href="#testimonials">Reviews</a></li>
-    <li><a href="#contact" class="mobile-cta">Get a Quote</a></li>
-  </ul>
-  <div class="mobile-social">
-    <a href="https://wa.me/917988320129" target="_blank" title="WhatsApp">💬</a>
-    <a href="https://instagram.com" target="_blank" title="Instagram">📸</a>
-    <a href="https://facebook.com" target="_blank" title="Facebook">👥</a>
-  </div>
-</div>
-
-<!-- HERO -->
-<section id="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-content">
-    <div class="hero-badge">✦ Premium Woodcraft Since 2010</div>
-    <h1 class="hero-title">Crafting Your<br><em>Dream Interiors</em></h1>
-    <p class="hero-sub">Turning Wood into Art — One Home at a Time</p>
-    <div class="hero-pills">
-      <span class="pill">Custom Furniture</span>
-      <span class="pill">Modular Kitchen</span>
-      <span class="pill">Interior Woodwork</span>
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="#" class="logo">Dhiman <span>Home Decor</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#contact" class="nav-cta">Get Quote</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
     </div>
-    <div class="hero-btns">
-      <a href="https://wa.me/917988320129?text=Hello!%20I'm%20interested%20in%20your%20woodwork%20services." target="_blank" class="btn-primary">
-        <span><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 48 48">
-<path fill="#fff" d="M4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5c5.1,0,9.8,2,13.4,5.6	C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19c0,0,0,0,0,0h0c-3.2,0-6.3-0.8-9.1-2.3L4.9,43.3z"></path><path fill="#fff" d="M4.9,43.8c-0.1,0-0.3-0.1-0.4-0.1c-0.1-0.1-0.2-0.3-0.1-0.5L7,33.5c-1.6-2.9-2.5-6.2-2.5-9.6	C4.5,13.2,13.3,4.5,24,4.5c5.2,0,10.1,2,13.8,5.7c3.7,3.7,5.7,8.6,5.7,13.8c0,10.7-8.7,19.5-19.5,19.5c-3.2,0-6.3-0.8-9.1-2.3	L5,43.8C5,43.8,4.9,43.8,4.9,43.8z"></path><path fill="#cfd8dc" d="M24,5c5.1,0,9.8,2,13.4,5.6C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19h0c-3.2,0-6.3-0.8-9.1-2.3	L4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5 M24,43L24,43L24,43 M24,43L24,43L24,43 M24,4L24,4C13,4,4,13,4,24	c0,3.4,0.8,6.7,2.5,9.6L3.9,43c-0.1,0.3,0,0.7,0.3,1c0.2,0.2,0.4,0.3,0.7,0.3c0.1,0,0.2,0,0.3,0l9.7-2.5c2.8,1.5,6,2.2,9.2,2.2	c11,0,20-9,20-20c0-5.3-2.1-10.4-5.8-14.1C34.4,6.1,29.4,4,24,4L24,4z"></path><path fill="#40c351" d="M35.2,12.8c-3-3-6.9-4.6-11.2-4.6C15.3,8.2,8.2,15.3,8.2,24c0,3,0.8,5.9,2.4,8.4L11,33l-1.6,5.8	l6-1.6l0.6,0.3c2.4,1.4,5.2,2.2,8,2.2h0c8.7,0,15.8-7.1,15.8-15.8C39.8,19.8,38.2,15.8,35.2,12.8z"></path><path fill="#fff" fill-rule="evenodd" d="M19.3,16c-0.4-0.8-0.7-0.8-1.1-0.8c-0.3,0-0.6,0-0.9,0	s-0.8,0.1-1.3,0.6c-0.4,0.5-1.7,1.6-1.7,4s1.7,4.6,1.9,4.9s3.3,5.3,8.1,7.2c4,1.6,4.8,1.3,5.7,1.2c0.9-0.1,2.8-1.1,3.2-2.3	c0.4-1.1,0.4-2.1,0.3-2.3c-0.1-0.2-0.4-0.3-0.9-0.6s-2.8-1.4-3.2-1.5c-0.4-0.2-0.8-0.2-1.1,0.2c-0.3,0.5-1.2,1.5-1.5,1.9	c-0.3,0.3-0.6,0.4-1,0.1c-0.5-0.2-2-0.7-3.8-2.4c-1.4-1.3-2.4-2.8-2.6-3.3c-0.3-0.5,0-0.7,0.2-1c0.2-0.2,0.5-0.6,0.7-0.8	c0.2-0.3,0.3-0.5,0.5-0.8c0.2-0.3,0.1-0.6,0-0.8C20.6,19.3,19.7,17,19.3,16z" clip-rule="evenodd"></path>
-</svg></span> Contact on WhatsApp
-      </a>
-      <a href="#portfolio" class="btn-secondary">
-        <span><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#B89230"><path d="M739-83.5q-7-2.5-13-8.5L522-296q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l85-85q6-6 13-8.5t15-2.5q8 0 15 2.5t13 8.5l204 204q6 6 8.5 13t2.5 15q0 8-2.5 15t-8.5 13l-85 85q-6 6-13 8.5T754-81q-8 0-15-2.5Zm15-92.5 29-29-147-147-29 29 147 147ZM189.5-83q-7.5-3-13.5-9l-84-84q-6-6-9-13.5T80-205q0-8 3-15t9-13l212-212h85l34-34-165-165h-57L80-765l113-113 121 121v57l165 165 116-116-43-43 56-56H495l-28-28 142-142 28 28v113l56-56 142 142q17 17 26 38.5t9 45.5q0 24-9 46t-26 39l-85-85-56 56-42-42-207 207v84L233-92q-6 6-13 9t-15 3q-8 0-15.5-3Zm15.5-93 170-170v-29h-29L176-205l29 29Zm0 0-29-29 15 14 14 15Zm549 0 29-29-29 29Z"/></svg></span> View Our Designs
-      </a>
+  </nav>
+
+  <!-- MOBILE MENU OVERLAY -->
+  <div id="mobileMenu" role="dialog" aria-label="Navigation menu">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#contact" class="mobile-cta">Get a Quote</a></li>
+    </ul>
+    <div class="mobile-social">
+      <a href="https://wa.me/917988320129" target="_blank" title="WhatsApp">💬</a>
+      <a href="https://instagram.com" target="_blank" title="Instagram">📸</a>
+      <a href="https://facebook.com" target="_blank" title="Facebook">👥</a>
     </div>
   </div>
-  <div class="hero-scroll">
-    <span>Scroll</span>
-    <div class="scroll-line"></div>
-  </div>
-</section>
 
-<!-- ABOUT -->
-<section id="about">
-  <div class="about-grid">
-    <div class="about-img-wrap fade-in-up">
-      <img src="https://media.istockphoto.com/id/858298592/photo/carpenter-at-work.jpg?s=612x612&w=0&k=20&c=OaKGgvWWQvkntMx7Ue1b7dFw_CM9vPRu_lNn4j2abnY=" alt="Master Carpenter at work" class="about-img">
-      <div class="about-img-frame"></div>
-      <div class="about-badge-float">
-        <div class="num">12+</div>
-        <div class="lbl">Years of Craft</div>
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-badge">✦ Premium Woodcraft Since 2010</div>
+      <h1 class="hero-title">Crafting Your<br><em>Dream Interiors</em></h1>
+      <p class="hero-sub">Turning Wood into Art — One Home at a Time</p>
+      <div class="hero-pills">
+        <span class="pill">Custom Furniture</span>
+        <span class="pill">Modular Kitchen</span>
+        <span class="pill">Interior Woodwork</span>
+      </div>
+      <div class="hero-btns">
+        <a href="https://wa.me/917988320129?text=Hello!%20I'm%20interested%20in%20your%20woodwork%20services."
+          target="_blank" class="btn-primary">
+          <span><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 48 48">
+              <path fill="#fff"
+                d="M4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5c5.1,0,9.8,2,13.4,5.6	C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19c0,0,0,0,0,0h0c-3.2,0-6.3-0.8-9.1-2.3L4.9,43.3z">
+              </path>
+              <path fill="#fff"
+                d="M4.9,43.8c-0.1,0-0.3-0.1-0.4-0.1c-0.1-0.1-0.2-0.3-0.1-0.5L7,33.5c-1.6-2.9-2.5-6.2-2.5-9.6	C4.5,13.2,13.3,4.5,24,4.5c5.2,0,10.1,2,13.8,5.7c3.7,3.7,5.7,8.6,5.7,13.8c0,10.7-8.7,19.5-19.5,19.5c-3.2,0-6.3-0.8-9.1-2.3	L5,43.8C5,43.8,4.9,43.8,4.9,43.8z">
+              </path>
+              <path fill="#cfd8dc"
+                d="M24,5c5.1,0,9.8,2,13.4,5.6C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19h0c-3.2,0-6.3-0.8-9.1-2.3	L4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5 M24,43L24,43L24,43 M24,43L24,43L24,43 M24,4L24,4C13,4,4,13,4,24	c0,3.4,0.8,6.7,2.5,9.6L3.9,43c-0.1,0.3,0,0.7,0.3,1c0.2,0.2,0.4,0.3,0.7,0.3c0.1,0,0.2,0,0.3,0l9.7-2.5c2.8,1.5,6,2.2,9.2,2.2	c11,0,20-9,20-20c0-5.3-2.1-10.4-5.8-14.1C34.4,6.1,29.4,4,24,4L24,4z">
+              </path>
+              <path fill="#40c351"
+                d="M35.2,12.8c-3-3-6.9-4.6-11.2-4.6C15.3,8.2,8.2,15.3,8.2,24c0,3,0.8,5.9,2.4,8.4L11,33l-1.6,5.8	l6-1.6l0.6,0.3c2.4,1.4,5.2,2.2,8,2.2h0c8.7,0,15.8-7.1,15.8-15.8C39.8,19.8,38.2,15.8,35.2,12.8z">
+              </path>
+              <path fill="#fff" fill-rule="evenodd"
+                d="M19.3,16c-0.4-0.8-0.7-0.8-1.1-0.8c-0.3,0-0.6,0-0.9,0	s-0.8,0.1-1.3,0.6c-0.4,0.5-1.7,1.6-1.7,4s1.7,4.6,1.9,4.9s3.3,5.3,8.1,7.2c4,1.6,4.8,1.3,5.7,1.2c0.9-0.1,2.8-1.1,3.2-2.3	c0.4-1.1,0.4-2.1,0.3-2.3c-0.1-0.2-0.4-0.3-0.9-0.6s-2.8-1.4-3.2-1.5c-0.4-0.2-0.8-0.2-1.1,0.2c-0.3,0.5-1.2,1.5-1.5,1.9	c-0.3,0.3-0.6,0.4-1,0.1c-0.5-0.2-2-0.7-3.8-2.4c-1.4-1.3-2.4-2.8-2.6-3.3c-0.3-0.5,0-0.7,0.2-1c0.2-0.2,0.5-0.6,0.7-0.8	c0.2-0.3,0.3-0.5,0.5-0.8c0.2-0.3,0.1-0.6,0-0.8C20.6,19.3,19.7,17,19.3,16z"
+                clip-rule="evenodd"></path>
+            </svg></span> Contact on WhatsApp
+        </a>
+        <a href="#portfolio" class="btn-secondary">
+          <span><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px"
+              fill="#B89230">
+              <path
+                d="M739-83.5q-7-2.5-13-8.5L522-296q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l85-85q6-6 13-8.5t15-2.5q8 0 15 2.5t13 8.5l204 204q6 6 8.5 13t2.5 15q0 8-2.5 15t-8.5 13l-85 85q-6 6-13 8.5T754-81q-8 0-15-2.5Zm15-92.5 29-29-147-147-29 29 147 147ZM189.5-83q-7.5-3-13.5-9l-84-84q-6-6-9-13.5T80-205q0-8 3-15t9-13l212-212h85l34-34-165-165h-57L80-765l113-113 121 121v57l165 165 116-116-43-43 56-56H495l-28-28 142-142 28 28v113l56-56 142 142q17 17 26 38.5t9 45.5q0 24-9 46t-26 39l-85-85-56 56-42-42-207 207v84L233-92q-6 6-13 9t-15 3q-8 0-15.5-3Zm15.5-93 170-170v-29h-29L176-205l29 29Zm0 0-29-29 15 14 14 15Zm549 0 29-29-29 29Z" />
+            </svg></span> View Our Designs
+        </a>
       </div>
     </div>
-    <div class="about-text fade-in-up">
-      <div class="section-label">Our Story</div>
-      <h2 class="section-title">Born from Passion,<br><em>Built with Precision</em></h2>
-      <div class="divider"></div>
-      <p>Dhiman Home Decor was founded with one simple belief — that every home deserves furniture as unique as the family living in it. With over a decade of hands-on experience, we blend traditional craftsmanship with modern design sensibilities.</p>
-      <p>From raw timber to finished masterpiece, every piece we create carries the mark of genuine skill. We personally oversee each project, ensuring quality that stands the test of time — and looks stunning doing it.</p>
-      <div class="about-highlights">
-        <div class="highlight-item">
-          <div class="icon">🔨</div>
-          <h4>Handcrafted Quality</h4>
-          <p>Every joint, edge and finish done by skilled hands</p>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-grid">
+      <div class="about-img-wrap fade-in-up">
+        <img
+          src="https://media.istockphoto.com/id/858298592/photo/carpenter-at-work.jpg?s=612x612&w=0&k=20&c=OaKGgvWWQvkntMx7Ue1b7dFw_CM9vPRu_lNn4j2abnY="
+          alt="Master Carpenter at work" class="about-img">
+        <div class="about-img-frame"></div>
+        <div class="about-badge-float">
+          <div class="num">12+</div>
+          <div class="lbl">Years of Craft</div>
         </div>
-        <div class="highlight-item">
-          <div class="icon">✏️</div>
-          <h4>Custom Designs</h4>
-          <p>Your vision, your space — designed exactly for you</p>
-        </div>
-        <div class="highlight-item">
-          <div class="icon">💰</div>
-          <h4>Affordable Pricing</h4>
-          <p>Premium quality without the premium price tag</p>
-        </div>
-        <div class="highlight-item">
-          <div class="icon">🏆</div>
-          <h4>500+ Projects Done</h4>
-        </div>
+      </div>
+      <div class="about-text fade-in-up">
+        <div class="section-label">Our Story</div>
+        <h2 class="section-title">Born from Passion,<br><em>Built with Precision</em></h2>
+        <div class="divider"></div>
+        <p>Dhiman Home Decor was founded with one simple belief — that every home deserves furniture as unique as the
+          family living in it. With over a decade of hands-on experience, we blend traditional craftsmanship with modern
+          design sensibilities.</p>
+        <p>From raw timber to finished masterpiece, every piece we create carries the mark of genuine skill. We
+          personally oversee each project, ensuring quality that stands the test of time — and looks stunning doing it.
+        </p>
+        <div class="about-highlights">
+          <div class="highlight-item">
+            <div class="icon">🔨</div>
+            <h4>Handcrafted Quality</h4>
+            <p>Every joint, edge and finish done by skilled hands</p>
+          </div>
+          <div class="highlight-item">
+            <div class="icon">✏️</div>
+            <h4>Custom Designs</h4>
+            <p>Your vision, your space — designed exactly for you</p>
+          </div>
+          <div class="highlight-item">
+            <div class="icon">💰</div>
+            <h4>Affordable Pricing</h4>
+            <p>Premium quality without the premium price tag</p>
+          </div>
+          <div class="highlight-item">
+            <div class="icon">🏆</div>
+            <h4>500+ Projects Done</h4>
+          </div>
           <p>Happy clients across Delhi NCR & beyond</p>
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section id="services">
-  <div style="max-width:1200px; margin:0 auto;">
-    <div class="section-label">What We Offer</div>
-    <h2 class="section-title">Our <em>Services</em></h2>
-    <div class="divider"></div>
-    <div class="services-grid">
-      <div class="service-card fade-in-up">
-        <div class="service-icon">🪑</div>
-        <h3>Custom Furniture</h3>
-        <p>Sofas, beds, dining sets, coffee tables — crafted to your exact measurements and style preferences. No two pieces are ever the same.</p>
-      </div>
-      <div class="service-card fade-in-up">
-        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#B89230"><path d="M320-640v-120h80v120h-80Zm0 360v-200h80v200h-80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h480q33 0 56.5 23.5T800-800v640q0 33-23.5 56.5T720-80H240Zm0-80h480v-360H240v360Zm0-440h480v-200H240v200Z"/></svg></div>
-        <h3>Modular Kitchen</h3>
-        <p>Functional, beautiful modular kitchens with premium shutters, soft-close hardware, and efficient storage solutions designed for Indian homes.</p>
-      </div>
-      <div class="service-card fade-in-up">
-        <div class="service-icon">🚪</div>
-        <h3>Wardrobes & Cabinets</h3>
-        <p>Walk-in wardrobes, sliding door wardrobes, TV units and wall cabinets built for maximum storage with a sleek, modern finish.</p>
-      </div>
-      <div class="service-card fade-in-up">
-        <div class="service-icon">🏠</div>
-        <h3>Interior Woodwork</h3>
-        <p>False ceilings, wall panelling, partition work, and complete interior fit-outs that transform ordinary rooms into extraordinary spaces.</p>
-      </div>
-      <div class="service-card fade-in-up">
-        <div class="service-icon">✨</div>
-        <h3>Repair & Polishing</h3>
-        <p>Restore your old furniture to its former glory. Professional wood polishing, PU finish, lacquering and structural repairs done right.</p>
-      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- PORTFOLIO -->
-<section id="portfolio">
-  <div style="max-width:1200px; margin:0 auto;">
-    <div class="section-label">Our Work</div>
-    <h2 class="section-title">Portfolio <em>Gallery</em></h2>
-    <div class="divider"></div>
-    <div class="filter-tabs">
-      <button class="filter-btn active" onclick="filterGallery('all',this)">All Work</button>
-      <button class="filter-btn" onclick="filterGallery('furniture',this)">Furniture</button>
-      <button class="filter-btn" onclick="filterGallery('kitchen',this)">Kitchen</button>
-      <button class="filter-btn" onclick="filterGallery('wardrobe',this)">Wardrobe</button>
-      <button class="filter-btn" onclick="filterGallery('decor',this)">Decor</button>
-    </div>
-    <div class="gallery-grid" id="galleryGrid">
-      <div class="gallery-item tall" data-cat="furniture">
-        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80" alt="Custom Sofa Set">
-        <div class="gallery-overlay"><div><div class="tag">Furniture</div><span>Custom Sofa Set</span></div></div>
-      </div>
-      <div class="gallery-item" data-cat="kitchen">
-        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80" alt="Modular Kitchen">
-        <div class="gallery-overlay"><div><div class="tag">Kitchen</div><span>Modular Kitchen</span></div></div>
-      </div>
-      <div class="gallery-item" data-cat="wardrobe">
-        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Walk-in Wardrobe">
-        <div class="gallery-overlay"><div><div class="tag">Wardrobe</div><span>Walk-in Wardrobe</span></div></div>
-      </div>
-      <div class="gallery-item" data-cat="decor">
-        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=80" alt="Living Room Decor">
-        <div class="gallery-overlay"><div><div class="tag">Decor</div><span>Living Room Panel</span></div></div>
-      </div>
-      <div class="gallery-item" data-cat="furniture">
-        <img src="https://images.unsplash.com/photo-1567016432779-094069958ea5?w=600&q=80" alt="Dining Set">
-        <div class="gallery-overlay"><div><div class="tag">Furniture</div><span>Dining Set</span></div></div>
-      </div>
-      <div class="gallery-item" data-cat="kitchen">
-        <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=80" alt="Kitchen Interior">
-        <div class="gallery-overlay"><div><div class="tag">Kitchen</div><span>Kitchen Interior</span></div></div>
-      </div>
-      <div class="gallery-item" data-cat="wardrobe">
-        <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=600&q=80" alt="Bedroom Wardrobe">
-        <div class="gallery-overlay"><div><div class="tag">Wardrobe</div><span>Bedroom Wardrobe</span></div></div>
-      </div>
-      <div class="gallery-item" data-cat="decor">
-        <img src="https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?w=600&q=80" alt="Wood Panel Wall">
-        <div class="gallery-overlay"><div><div class="tag">Decor</div><span>Wood Panel Wall</span></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WHY CHOOSE US -->
-<section id="why">
-  <div style="max-width:1100px; margin:0 auto; text-align:center;">
-    <div class="section-label" style="justify-content:center;">Why Dhiman</div>
-    <h2 class="section-title" style="max-width:600px; margin:0 auto 24px;">Why Clients <em>Choose Us</em></h2>
-    <div class="divider" style="margin:0 auto 60px;"></div>
-    <div class="why-grid">
-      <div class="why-item fade-in-up">
-        <div class="why-num">01</div>
-        <div class="why-icon">🔧</div>
-        <h3>Skilled Craftsmanship</h3>
-        <p>12+ years of hands-on woodworking experience. We don't just build furniture — we craft heirlooms.</p>
-      </div>
-      <div class="why-item fade-in-up">
-        <div class="why-num">02</div>
-        <div class="why-icon">💎</div>
-        <h3>Premium Materials</h3>
-        <p>Only top-grade plywood, MDF, solid wood and hardware. No compromises on what goes into your home.</p>
-      </div>
-      <div class="why-item fade-in-up">
-        <div class="why-num">03</div>
-        <div class="why-icon">🎨</div>
-        <h3>Fully Custom Designs</h3>
-        <p>From concept to creation, every design is built around your space, your taste and your budget.</p>
-      </div>
-      <div class="why-item fade-in-up">
-        <div class="why-num">04</div>
-        <div class="why-icon">⏰</div>
-        <h3>On-Time Delivery</h3>
-        <p>We respect your timeline. Projects are completed on schedule — every single time.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section id="testimonials">
-  <div style="max-width:1100px; margin:0 auto;">
-    <div class="section-label">Client Stories</div>
-    <h2 class="section-title">What Our Clients <em>Say</em></h2>
-    <div class="divider"></div>
-    <div class="testi-grid">
-      <div class="testi-card fade-in-up">
-        <div class="stars">★★★★★</div>
-        <p class="testi-text">"Dhiman ji transformed our entire living room. The sofa set and TV unit look absolutely stunning — exactly what we imagined, maybe better. Highly recommended!"</p>
-        <div class="testi-author">
-          <div class="testi-avatar">R</div>
-          <div>
-            <div class="testi-name">Ranjit Mehra</div>
-            <div class="testi-loc">📍 Rohini, Delhi</div>
-          </div>
-        </div>
-      </div>
-      <div class="testi-card fade-in-up">
-        <div class="stars">★★★★★</div>
-        <p class="testi-text">"Got my modular kitchen done last month. The quality is excellent and pricing was very fair. Work was completed on time without any mess. Will definitely call again!"</p>
-        <div class="testi-author">
-          <div class="testi-avatar">P</div>
-          <div>
-            <div class="testi-name">Priya Sharma</div>
-            <div class="testi-loc">📍 Dwarka, Delhi</div>
-          </div>
-        </div>
-      </div>
-      <div class="testi-card fade-in-up">
-        <div class="stars">★★★★★</div>
-        <p class="testi-text">"Best carpenter in the area, no doubt. My walk-in wardrobe is a dream — every detail is perfect. True artisan. Trust them with your eyes closed."</p>
-        <div class="testi-author">
-          <div class="testi-avatar">A</div>
-          <div>
-            <div class="testi-name">Amit Chaudhary</div>
-            <div class="testi-loc">📍 Noida Sector 62</div>
-          </div>
-        </div>
-      </div>
-      <div class="testi-card fade-in-up">
-        <div class="stars">★★★★★</div>
-        <p class="testi-text">"We renovated the entire apartment with Dhiman Home Decor. From kitchen to bedrooms — everything is top class. Great communication and flawless execution."</p>
-        <div class="testi-author">
-          <div class="testi-avatar">S</div>
-          <div>
-            <div class="testi-name">Sunita & Ramesh</div>
-            <div class="testi-loc">📍 Gurgaon</div>
-          </div>
-        </div>
-      </div>
-      <div class="testi-card fade-in-up">
-        <div class="stars">★★★★☆</div>
-        <p class="testi-text">"Got old furniture repaired and polished. It looks brand new now! Very reasonable charges and the work was done neatly. Genuinely happy with the service."</p>
-        <div class="testi-author">
-          <div class="testi-avatar">V</div>
-          <div>
-            <div class="testi-name">Vivek Rathore</div>
-            <div class="testi-loc">📍 Pitampura, Delhi</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <div class="contact-grid">
-    <div class="contact-info fade-in-up">
-      <div class="section-label">Reach Out</div>
-      <h2 class="section-title">Let's Build Something <em>Beautiful</em></h2>
+  <!-- SERVICES -->
+  <section id="services">
+    <div style="max-width:1200px; margin:0 auto;">
+      <div class="section-label">What We Offer</div>
+      <h2 class="section-title">Our <em>Services</em></h2>
       <div class="divider"></div>
-      <h3>Get in touch via your preferred channel:</h3>
-      <div class="contact-channels">
-        <a href="https://wa.me/917988320129?text=Hi!%20I'd%20like%20a%20quote%20for%20my%20home%20project." target="_blank" class="channel-btn whatsapp">
-          <span class="channel-icon"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 48 48">
-<path fill="#fff" d="M4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5c5.1,0,9.8,2,13.4,5.6	C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19c0,0,0,0,0,0h0c-3.2,0-6.3-0.8-9.1-2.3L4.9,43.3z"></path><path fill="#fff" d="M4.9,43.8c-0.1,0-0.3-0.1-0.4-0.1c-0.1-0.1-0.2-0.3-0.1-0.5L7,33.5c-1.6-2.9-2.5-6.2-2.5-9.6	C4.5,13.2,13.3,4.5,24,4.5c5.2,0,10.1,2,13.8,5.7c3.7,3.7,5.7,8.6,5.7,13.8c0,10.7-8.7,19.5-19.5,19.5c-3.2,0-6.3-0.8-9.1-2.3	L5,43.8C5,43.8,4.9,43.8,4.9,43.8z"></path><path fill="#cfd8dc" d="M24,5c5.1,0,9.8,2,13.4,5.6C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19h0c-3.2,0-6.3-0.8-9.1-2.3	L4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5 M24,43L24,43L24,43 M24,43L24,43L24,43 M24,4L24,4C13,4,4,13,4,24	c0,3.4,0.8,6.7,2.5,9.6L3.9,43c-0.1,0.3,0,0.7,0.3,1c0.2,0.2,0.4,0.3,0.7,0.3c0.1,0,0.2,0,0.3,0l9.7-2.5c2.8,1.5,6,2.2,9.2,2.2	c11,0,20-9,20-20c0-5.3-2.1-10.4-5.8-14.1C34.4,6.1,29.4,4,24,4L24,4z"></path><path fill="#40c351" d="M35.2,12.8c-3-3-6.9-4.6-11.2-4.6C15.3,8.2,8.2,15.3,8.2,24c0,3,0.8,5.9,2.4,8.4L11,33l-1.6,5.8	l6-1.6l0.6,0.3c2.4,1.4,5.2,2.2,8,2.2h0c8.7,0,15.8-7.1,15.8-15.8C39.8,19.8,38.2,15.8,35.2,12.8z"></path><path fill="#fff" fill-rule="evenodd" d="M19.3,16c-0.4-0.8-0.7-0.8-1.1-0.8c-0.3,0-0.6,0-0.9,0	s-0.8,0.1-1.3,0.6c-0.4,0.5-1.7,1.6-1.7,4s1.7,4.6,1.9,4.9s3.3,5.3,8.1,7.2c4,1.6,4.8,1.3,5.7,1.2c0.9-0.1,2.8-1.1,3.2-2.3	c0.4-1.1,0.4-2.1,0.3-2.3c-0.1-0.2-0.4-0.3-0.9-0.6s-2.8-1.4-3.2-1.5c-0.4-0.2-0.8-0.2-1.1,0.2c-0.3,0.5-1.2,1.5-1.5,1.9	c-0.3,0.3-0.6,0.4-1,0.1c-0.5-0.2-2-0.7-3.8-2.4c-1.4-1.3-2.4-2.8-2.6-3.3c-0.3-0.5,0-0.7,0.2-1c0.2-0.2,0.5-0.6,0.7-0.8	c0.2-0.3,0.3-0.5,0.5-0.8c0.2-0.3,0.1-0.6,0-0.8C20.6,19.3,19.7,17,19.3,16z" clip-rule="evenodd"></path>
-</svg></span>
-          <div>
-            <div style="font-weight:500;">WhatsApp Chat</div>
-            <div style="font-size:0.75rem;opacity:0.7;margin-top:2px;">+91 79883 20129 — instant reply</div>
-          </div>
-        </a>
-        <a href="mailto:dhimanhomedeocr@gmail.com" class="channel-btn gmail">
-          <span class="channel-icon">✉️</span>
-          <div>
-            <div style="font-weight:500;">Send Email</div>
-            <div style="font-size:0.75rem;opacity:0.7;margin-top:2px;">dhimanhomedeocr@gmail.com</div>
-          </div>
-        </a>
-        <a href="tel:+917988320129" class="channel-btn call">
-          <span class="channel-icon">📞</span>
-          <div>
-            <div style="font-weight:500;">Call Us Directly</div>
-            <div style="font-size:0.75rem;opacity:0.7;margin-top:2px;">+917988320129</div>
-          </div>
-        </a>
-      </div>
-      <div class="social-links">
-        <a href="https://instagram.com" target="_blank" class="social-btn" title="Instagram"><svg viewBox="-2 -2 24.00 24.00" height="24px" width="24px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" stroke="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>instagram [#167]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-340.000000, -7439.000000)" fill="#b12525"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M289.869652,7279.12273 C288.241769,7279.19618 286.830805,7279.5942 285.691486,7280.72871 C284.548187,7281.86918 284.155147,7283.28558 284.081514,7284.89653 C284.035742,7285.90201 283.768077,7293.49818 284.544207,7295.49028 C285.067597,7296.83422 286.098457,7297.86749 287.454694,7298.39256 C288.087538,7298.63872 288.809936,7298.80547 289.869652,7298.85411 C298.730467,7299.25511 302.015089,7299.03674 303.400182,7295.49028 C303.645956,7294.859 303.815113,7294.1374 303.86188,7293.08031 C304.26686,7284.19677 303.796207,7282.27117 302.251908,7280.72871 C301.027016,7279.50685 299.5862,7278.67508 289.869652,7279.12273 M289.951245,7297.06748 C288.981083,7297.0238 288.454707,7296.86201 288.103459,7296.72603 C287.219865,7296.3826 286.556174,7295.72155 286.214876,7294.84312 C285.623823,7293.32944 285.819846,7286.14023 285.872583,7284.97693 C285.924325,7283.83745 286.155174,7282.79624 286.959165,7281.99226 C287.954203,7280.99968 289.239792,7280.51332 297.993144,7280.90837 C299.135448,7280.95998 300.179243,7281.19026 300.985224,7281.99226 C301.980262,7282.98483 302.473801,7284.28014 302.071806,7292.99991 C302.028024,7293.96767 301.865833,7294.49274 301.729513,7294.84312 C300.829003,7297.15085 298.757333,7297.47145 289.951245,7297.06748 M298.089663,7283.68956 C298.089663,7284.34665 298.623998,7284.88065 299.283709,7284.88065 C299.943419,7284.88065 300.47875,7284.34665 300.47875,7283.68956 C300.47875,7283.03248 299.943419,7282.49847 299.283709,7282.49847 C298.623998,7282.49847 298.089663,7283.03248 298.089663,7283.68956 M288.862673,7288.98792 C288.862673,7291.80286 291.150266,7294.08479 293.972194,7294.08479 C296.794123,7294.08479 299.081716,7291.80286 299.081716,7288.98792 C299.081716,7286.17298 296.794123,7283.89205 293.972194,7283.89205 C291.150266,7283.89205 288.862673,7286.17298 288.862673,7288.98792 M290.655732,7288.98792 C290.655732,7287.16159 292.140329,7285.67967 293.972194,7285.67967 C295.80406,7285.67967 297.288657,7287.16159 297.288657,7288.98792 C297.288657,7290.81525 295.80406,7292.29716 293.972194,7292.29716 C292.140329,7292.29716 290.655732,7290.81525 290.655732,7288.98792" id="instagram-[#167]"> </path> </g> </g> </g> </g></svg></a>
-        <a href="https://facebook.com" target="_blank" class="social-btn" title="Facebook"><svg width="24px" height="24px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>Facebook-color</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Color-" transform="translate(-200.000000, -160.000000)" fill="#4460A0"> <path d="M225.638355,208 L202.649232,208 C201.185673,208 200,206.813592 200,205.350603 L200,162.649211 C200,161.18585 201.185859,160 202.649232,160 L245.350955,160 C246.813955,160 248,161.18585 248,162.649211 L248,205.350603 C248,206.813778 246.813769,208 245.350955,208 L233.119305,208 L233.119305,189.411755 L239.358521,189.411755 L240.292755,182.167586 L233.119305,182.167586 L233.119305,177.542641 C233.119305,175.445287 233.701712,174.01601 236.70929,174.01601 L240.545311,174.014333 L240.545311,167.535091 C239.881886,167.446808 237.604784,167.24957 234.955552,167.24957 C229.424834,167.24957 225.638355,170.625526 225.638355,176.825209 L225.638355,182.167586 L219.383122,182.167586 L219.383122,189.411755 L225.638355,189.411755 L225.638355,208 L225.638355,208 Z" id="Facebook"> </path> </g> </g> </g></svg> </a>
-        <a href="https://wa.me/917988320129" target="_blank" class="social-btn" title="WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 48 48">
-<path fill="#fff" d="M4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5c5.1,0,9.8,2,13.4,5.6	C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19c0,0,0,0,0,0h0c-3.2,0-6.3-0.8-9.1-2.3L4.9,43.3z"></path><path fill="#fff" d="M4.9,43.8c-0.1,0-0.3-0.1-0.4-0.1c-0.1-0.1-0.2-0.3-0.1-0.5L7,33.5c-1.6-2.9-2.5-6.2-2.5-9.6	C4.5,13.2,13.3,4.5,24,4.5c5.2,0,10.1,2,13.8,5.7c3.7,3.7,5.7,8.6,5.7,13.8c0,10.7-8.7,19.5-19.5,19.5c-3.2,0-6.3-0.8-9.1-2.3	L5,43.8C5,43.8,4.9,43.8,4.9,43.8z"></path><path fill="#cfd8dc" d="M24,5c5.1,0,9.8,2,13.4,5.6C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19h0c-3.2,0-6.3-0.8-9.1-2.3	L4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5 M24,43L24,43L24,43 M24,43L24,43L24,43 M24,4L24,4C13,4,4,13,4,24	c0,3.4,0.8,6.7,2.5,9.6L3.9,43c-0.1,0.3,0,0.7,0.3,1c0.2,0.2,0.4,0.3,0.7,0.3c0.1,0,0.2,0,0.3,0l9.7-2.5c2.8,1.5,6,2.2,9.2,2.2	c11,0,20-9,20-20c0-5.3-2.1-10.4-5.8-14.1C34.4,6.1,29.4,4,24,4L24,4z"></path><path fill="#40c351" d="M35.2,12.8c-3-3-6.9-4.6-11.2-4.6C15.3,8.2,8.2,15.3,8.2,24c0,3,0.8,5.9,2.4,8.4L11,33l-1.6,5.8	l6-1.6l0.6,0.3c2.4,1.4,5.2,2.2,8,2.2h0c8.7,0,15.8-7.1,15.8-15.8C39.8,19.8,38.2,15.8,35.2,12.8z"></path><path fill="#fff" fill-rule="evenodd" d="M19.3,16c-0.4-0.8-0.7-0.8-1.1-0.8c-0.3,0-0.6,0-0.9,0	s-0.8,0.1-1.3,0.6c-0.4,0.5-1.7,1.6-1.7,4s1.7,4.6,1.9,4.9s3.3,5.3,8.1,7.2c4,1.6,4.8,1.3,5.7,1.2c0.9-0.1,2.8-1.1,3.2-2.3	c0.4-1.1,0.4-2.1,0.3-2.3c-0.1-0.2-0.4-0.3-0.9-0.6s-2.8-1.4-3.2-1.5c-0.4-0.2-0.8-0.2-1.1,0.2c-0.3,0.5-1.2,1.5-1.5,1.9	c-0.3,0.3-0.6,0.4-1,0.1c-0.5-0.2-2-0.7-3.8-2.4c-1.4-1.3-2.4-2.8-2.6-3.3c-0.3-0.5,0-0.7,0.2-1c0.2-0.2,0.5-0.6,0.7-0.8	c0.2-0.3,0.3-0.5,0.5-0.8c0.2-0.3,0.1-0.6,0-0.8C20.6,19.3,19.7,17,19.3,16z" clip-rule="evenodd"></path>
-</svg></a>
-      </div>
-      <div class="map-placeholder">
-        <div class="map-icon">📍</div>
-        <div style="font-weight:500; color:var(--beige-light);">Dhiman Home Decor Workshop</div>
-        <div style="font-size:0.78rem; opacity:0.6;">Delhi NCR — Serving Pan Delhi, Noida, Gurgaon</div>
-        <div style="font-size:0.75rem; color:var(--gold); margin-top:6px; position:relative; z-index:1;">Click to open in Maps ↗</div>
-      </div>
-    </div>
-    <div class="fade-in-up">
-      <div style="background:var(--glass); border:1px solid var(--glass-border); border-radius:8px; padding:44px; backdrop-filter:blur(16px);">
-        <h3 style="font-family:var(--font-display); font-size:1.6rem; font-weight:400; color:var(--cream); margin-bottom:8px;">Send a Message</h3>
-        <p style="font-size:0.83rem; color:var(--beige); margin-bottom:32px; font-weight:300;">We'll get back to you within a few hours.</p>
-        <form class="contact-form" onsubmit="handleForm(event)">
-          <div class="form-row">
-            <div class="form-group">
-              <label>Your Name</label>
-              <input type="text" placeholder="Rajesh Kumar" required>
-            </div>
-            <div class="form-group">
-              <label>Phone Number</label>
-              <input type="tel" placeholder="+91 98765 43210" required>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Service Required</label>
-            <select style="background:rgba(255,255,255,0.04); border:1px solid rgba(201,147,58,0.2); border-radius:4px; padding:14px 18px; color:var(--cream); font-family:var(--font-body); font-size:0.9rem; outline:none; width:100%;">
-              <option value="" style="background:#111;">Select a service...</option>
-              <option value="furniture" style="background:#111;">Custom Furniture</option>
-              <option value="kitchen" style="background:#111;">Modular Kitchen</option>
-              <option value="wardrobe" style="background:#111;">Wardrobe & Cabinets</option>
-              <option value="interior" style="background:#111;">Interior Woodwork</option>
-              <option value="repair" style="background:#111;">Repair & Polishing</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Your Message</label>
-            <textarea rows="5" placeholder="Tell us about your project — dimensions, materials, budget range, location..."></textarea>
-          </div>
-          <button type="submit" class="submit-btn">Send Enquiry →</button>
-        </form>
-        <div id="formSuccess" style="display:none; background:rgba(37,211,102,0.1); border:1px solid rgba(37,211,102,0.3); border-radius:6px; padding:20px; margin-top:20px; color:#4ade80; font-size:0.9rem; text-align:center;">
-          ✅ Message sent! We'll contact you within a few hours.
+      <div class="services-grid">
+        <div class="service-card fade-in-up">
+          <div class="service-icon">🪑</div>
+          <h3>Custom Furniture</h3>
+          <p>Sofas, beds, dining sets, coffee tables — crafted to your exact measurements and style preferences. No two
+            pieces are ever the same.</p>
+        </div>
+        <div class="service-card fade-in-up">
+          <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960"
+              width="30px" fill="#B89230">
+              <path
+                d="M320-640v-120h80v120h-80Zm0 360v-200h80v200h-80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h480q33 0 56.5 23.5T800-800v640q0 33-23.5 56.5T720-80H240Zm0-80h480v-360H240v360Zm0-440h480v-200H240v200Z" />
+            </svg></div>
+          <h3>Modular Kitchen</h3>
+          <p>Functional, beautiful modular kitchens with premium shutters, soft-close hardware, and efficient storage
+            solutions designed for Indian homes.</p>
+        </div>
+        <div class="service-card fade-in-up">
+          <div class="service-icon">🚪</div>
+          <h3>Wardrobes & Cabinets</h3>
+          <p>Walk-in wardrobes, sliding door wardrobes, TV units and wall cabinets built for maximum storage with a
+            sleek, modern finish.</p>
+        </div>
+        <div class="service-card fade-in-up">
+          <div class="service-icon">🏠</div>
+          <h3>Interior Woodwork</h3>
+          <p>False ceilings, wall panelling, partition work, and complete interior fit-outs that transform ordinary
+            rooms into extraordinary spaces.</p>
+        </div>
+        <div class="service-card fade-in-up">
+          <div class="service-icon">✨</div>
+          <h3>Repair & Polishing</h3>
+          <p>Restore your old furniture to its former glory. Professional wood polishing, PU finish, lacquering and
+            structural repairs done right.</p>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- FOOTER -->
-<footer>
-  <div class="footer-top">
-    <div class="footer-brand">
-      <a href="#" class="logo">Dhiman <span>Home Decor</span></a>
-      <p class="footer-tagline">"Turning Wood into Art"</p>
-      <p class="footer-desc">Premium custom furniture and interior woodwork for homes across Delhi NCR. Every piece crafted with passion, precision and pride.</p>
+  <!-- PORTFOLIO -->
+  <section id="portfolio">
+    <div style="max-width:1200px; margin:0 auto;">
+      <div class="section-label">Our Work</div>
+      <h2 class="section-title">Portfolio <em>Gallery</em></h2>
+      <div class="divider"></div>
+      <div class="filter-tabs">
+        <button class="filter-btn active" onclick="filterGallery('all',this)">All Work</button>
+        <button class="filter-btn" onclick="filterGallery('furniture',this)">Furniture</button>
+        <button class="filter-btn" onclick="filterGallery('kitchen',this)">Kitchen</button>
+        <button class="filter-btn" onclick="filterGallery('wardrobe',this)">Wardrobe</button>
+        <button class="filter-btn" onclick="filterGallery('decor',this)">Decor</button>
+      </div>
+      <div class="gallery-grid" id="galleryGrid">
+        <div class="gallery-item tall" data-cat="furniture">
+          <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80" alt="Custom Sofa Set">
+          <div class="gallery-overlay">
+            <div>
+              <div class="tag">Furniture</div><span>Custom Sofa Set</span>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item" data-cat="kitchen">
+          <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80" alt="Modular Kitchen">
+          <div class="gallery-overlay">
+            <div>
+              <div class="tag">Kitchen</div><span>Modular Kitchen</span>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item" data-cat="wardrobe">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Walk-in Wardrobe">
+          <div class="gallery-overlay">
+            <div>
+              <div class="tag">Wardrobe</div><span>Walk-in Wardrobe</span>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item" data-cat="decor">
+          <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=80" alt="Living Room Decor">
+          <div class="gallery-overlay">
+            <div>
+              <div class="tag">Decor</div><span>Living Room Panel</span>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item" data-cat="furniture">
+          <img src="https://images.unsplash.com/photo-1567016432779-094069958ea5?w=600&q=80" alt="Dining Set">
+          <div class="gallery-overlay">
+            <div>
+              <div class="tag">Furniture</div><span>Dining Set</span>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item" data-cat="kitchen">
+          <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=80" alt="Kitchen Interior">
+          <div class="gallery-overlay">
+            <div>
+              <div class="tag">Kitchen</div><span>Kitchen Interior</span>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item" data-cat="wardrobe">
+          <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=600&q=80" alt="Bedroom Wardrobe">
+          <div class="gallery-overlay">
+            <div>
+              <div class="tag">Wardrobe</div><span>Bedroom Wardrobe</span>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item" data-cat="decor">
+          <img src="https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?w=600&q=80" alt="Wood Panel Wall">
+          <div class="gallery-overlay">
+            <div>
+              <div class="tag">Decor</div><span>Wood Panel Wall</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="footer-col">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#testimonials">Reviews</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Services</h4>
-      <ul>
-        <li><a href="#services">Custom Furniture</a></li>
-        <li><a href="#services">Modular Kitchen</a></li>
-        <li><a href="#services">Wardrobes</a></li>
-        <li><a href="#services">Interior Woodwork</a></li>
-        <li><a href="#services">Repair & Polish</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Contact</h4>
-      <ul>
-        <li><a href="tel:+917988320129">📞 +91 79883 20129</a></li>
-        <li><a href="https://wa.me/917988320129" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15" height="15" viewBox="0 0 48 48">
-<path fill="#fff" d="M4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5c5.1,0,9.8,2,13.4,5.6	C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19c0,0,0,0,0,0h0c-3.2,0-6.3-0.8-9.1-2.3L4.9,43.3z"></path><path fill="#fff" d="M4.9,43.8c-0.1,0-0.3-0.1-0.4-0.1c-0.1-0.1-0.2-0.3-0.1-0.5L7,33.5c-1.6-2.9-2.5-6.2-2.5-9.6	C4.5,13.2,13.3,4.5,24,4.5c5.2,0,10.1,2,13.8,5.7c3.7,3.7,5.7,8.6,5.7,13.8c0,10.7-8.7,19.5-19.5,19.5c-3.2,0-6.3-0.8-9.1-2.3	L5,43.8C5,43.8,4.9,43.8,4.9,43.8z"></path><path fill="#cfd8dc" d="M24,5c5.1,0,9.8,2,13.4,5.6C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19h0c-3.2,0-6.3-0.8-9.1-2.3	L4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5 M24,43L24,43L24,43 M24,43L24,43L24,43 M24,4L24,4C13,4,4,13,4,24	c0,3.4,0.8,6.7,2.5,9.6L3.9,43c-0.1,0.3,0,0.7,0.3,1c0.2,0.2,0.4,0.3,0.7,0.3c0.1,0,0.2,0,0.3,0l9.7-2.5c2.8,1.5,6,2.2,9.2,2.2	c11,0,20-9,20-20c0-5.3-2.1-10.4-5.8-14.1C34.4,6.1,29.4,4,24,4L24,4z"></path><path fill="#40c351" d="M35.2,12.8c-3-3-6.9-4.6-11.2-4.6C15.3,8.2,8.2,15.3,8.2,24c0,3,0.8,5.9,2.4,8.4L11,33l-1.6,5.8	l6-1.6l0.6,0.3c2.4,1.4,5.2,2.2,8,2.2h0c8.7,0,15.8-7.1,15.8-15.8C39.8,19.8,38.2,15.8,35.2,12.8z"></path><path fill="#fff" fill-rule="evenodd" d="M19.3,16c-0.4-0.8-0.7-0.8-1.1-0.8c-0.3,0-0.6,0-0.9,0	s-0.8,0.1-1.3,0.6c-0.4,0.5-1.7,1.6-1.7,4s1.7,4.6,1.9,4.9s3.3,5.3,8.1,7.2c4,1.6,4.8,1.3,5.7,1.2c0.9-0.1,2.8-1.1,3.2-2.3	c0.4-1.1,0.4-2.1,0.3-2.3c-0.1-0.2-0.4-0.3-0.9-0.6s-2.8-1.4-3.2-1.5c-0.4-0.2-0.8-0.2-1.1,0.2c-0.3,0.5-1.2,1.5-1.5,1.9	c-0.3,0.3-0.6,0.4-1,0.1c-0.5-0.2-2-0.7-3.8-2.4c-1.4-1.3-2.4-2.8-2.6-3.3c-0.3-0.5,0-0.7,0.2-1c0.2-0.2,0.5-0.6,0.7-0.8	c0.2-0.3,0.3-0.5,0.5-0.8c0.2-0.3,0.1-0.6,0-0.8C20.6,19.3,19.7,17,19.3,16z" clip-rule="evenodd"></path>
-</svg> WhatsApp</a></li>
-        <li><a href="mailto:dhimanhomedeocr@gmail.com"><svg width="15px" height="15px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="style=linear"> <g id="email"> <path id="vector" d="M17 20.5H7C4 20.5 2 19 2 15.5V8.5C2 5 4 3.5 7 3.5H17C20 3.5 22 5 22 8.5V15.5C22 19 20 20.5 17 20.5Z" stroke="#a20606" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path> <path id="vector_2" d="M18.7698 7.7688L13.2228 12.0551C12.5025 12.6116 11.4973 12.6116 10.777 12.0551L5.22998 7.7688" stroke="#a20606" stroke-width="1.5" stroke-linecap="round"></path> </g> </g> </g></svg> Email Us</a></li>
-        <li><a href="https://instagram.com" target="_blank"><svg viewBox="-2 -2 24.00 24.00" height="15px" width="15px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" stroke="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>instagram [#167]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-340.000000, -7439.000000)" fill="#b12525"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M289.869652,7279.12273 C288.241769,7279.19618 286.830805,7279.5942 285.691486,7280.72871 C284.548187,7281.86918 284.155147,7283.28558 284.081514,7284.89653 C284.035742,7285.90201 283.768077,7293.49818 284.544207,7295.49028 C285.067597,7296.83422 286.098457,7297.86749 287.454694,7298.39256 C288.087538,7298.63872 288.809936,7298.80547 289.869652,7298.85411 C298.730467,7299.25511 302.015089,7299.03674 303.400182,7295.49028 C303.645956,7294.859 303.815113,7294.1374 303.86188,7293.08031 C304.26686,7284.19677 303.796207,7282.27117 302.251908,7280.72871 C301.027016,7279.50685 299.5862,7278.67508 289.869652,7279.12273 M289.951245,7297.06748 C288.981083,7297.0238 288.454707,7296.86201 288.103459,7296.72603 C287.219865,7296.3826 286.556174,7295.72155 286.214876,7294.84312 C285.623823,7293.32944 285.819846,7286.14023 285.872583,7284.97693 C285.924325,7283.83745 286.155174,7282.79624 286.959165,7281.99226 C287.954203,7280.99968 289.239792,7280.51332 297.993144,7280.90837 C299.135448,7280.95998 300.179243,7281.19026 300.985224,7281.99226 C301.980262,7282.98483 302.473801,7284.28014 302.071806,7292.99991 C302.028024,7293.96767 301.865833,7294.49274 301.729513,7294.84312 C300.829003,7297.15085 298.757333,7297.47145 289.951245,7297.06748 M298.089663,7283.68956 C298.089663,7284.34665 298.623998,7284.88065 299.283709,7284.88065 C299.943419,7284.88065 300.47875,7284.34665 300.47875,7283.68956 C300.47875,7283.03248 299.943419,7282.49847 299.283709,7282.49847 C298.623998,7282.49847 298.089663,7283.03248 298.089663,7283.68956 M288.862673,7288.98792 C288.862673,7291.80286 291.150266,7294.08479 293.972194,7294.08479 C296.794123,7294.08479 299.081716,7291.80286 299.081716,7288.98792 C299.081716,7286.17298 296.794123,7283.89205 293.972194,7283.89205 C291.150266,7283.89205 288.862673,7286.17298 288.862673,7288.98792 M290.655732,7288.98792 C290.655732,7287.16159 292.140329,7285.67967 293.972194,7285.67967 C295.80406,7285.67967 297.288657,7287.16159 297.288657,7288.98792 C297.288657,7290.81525 295.80406,7292.29716 293.972194,7292.29716 C292.140329,7292.29716 290.655732,7290.81525 290.655732,7288.98792" id="instagram-[#167]"> </path> </g> </g> </g> </g></svg> Instagram </a></li>
-        <li><a href="https://facebook.com" target="_blank"><svg width="15px" height="15px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>Facebook-color</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Color-" transform="translate(-200.000000, -160.000000)" fill="#4460A0"> <path d="M225.638355,208 L202.649232,208 C201.185673,208 200,206.813592 200,205.350603 L200,162.649211 C200,161.18585 201.185859,160 202.649232,160 L245.350955,160 C246.813955,160 248,161.18585 248,162.649211 L248,205.350603 C248,206.813778 246.813769,208 245.350955,208 L233.119305,208 L233.119305,189.411755 L239.358521,189.411755 L240.292755,182.167586 L233.119305,182.167586 L233.119305,177.542641 C233.119305,175.445287 233.701712,174.01601 236.70929,174.01601 L240.545311,174.014333 L240.545311,167.535091 C239.881886,167.446808 237.604784,167.24957 234.955552,167.24957 C229.424834,167.24957 225.638355,170.625526 225.638355,176.825209 L225.638355,182.167586 L219.383122,182.167586 L219.383122,189.411755 L225.638355,189.411755 L225.638355,208 L225.638355,208 Z" id="Facebook"> </path> </g> </g> </g></svg> Facebook</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>© 2025 Dhiman Home Decor. All rights reserved.</span>
-    <span>Carpenter Near Me | Custom Furniture Delhi | Modular Kitchen NCR</span>
-  </div>
-</footer>
+  </section>
 
-<!-- WhatsApp Float -->
-<a href="https://wa.me/917988320129?text=Hello!%20I'm%20interested%20in%20your%20woodwork%20services." target="_blank" class="wa-float">
-  <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 48 48">
-<path fill="#fff" d="M4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5c5.1,0,9.8,2,13.4,5.6	C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19c0,0,0,0,0,0h0c-3.2,0-6.3-0.8-9.1-2.3L4.9,43.3z"></path><path fill="#fff" d="M4.9,43.8c-0.1,0-0.3-0.1-0.4-0.1c-0.1-0.1-0.2-0.3-0.1-0.5L7,33.5c-1.6-2.9-2.5-6.2-2.5-9.6	C4.5,13.2,13.3,4.5,24,4.5c5.2,0,10.1,2,13.8,5.7c3.7,3.7,5.7,8.6,5.7,13.8c0,10.7-8.7,19.5-19.5,19.5c-3.2,0-6.3-0.8-9.1-2.3	L5,43.8C5,43.8,4.9,43.8,4.9,43.8z"></path><path fill="#cfd8dc" d="M24,5c5.1,0,9.8,2,13.4,5.6C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19h0c-3.2,0-6.3-0.8-9.1-2.3	L4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5 M24,43L24,43L24,43 M24,43L24,43L24,43 M24,4L24,4C13,4,4,13,4,24	c0,3.4,0.8,6.7,2.5,9.6L3.9,43c-0.1,0.3,0,0.7,0.3,1c0.2,0.2,0.4,0.3,0.7,0.3c0.1,0,0.2,0,0.3,0l9.7-2.5c2.8,1.5,6,2.2,9.2,2.2	c11,0,20-9,20-20c0-5.3-2.1-10.4-5.8-14.1C34.4,6.1,29.4,4,24,4L24,4z"></path><path fill="#40c351" d="M35.2,12.8c-3-3-6.9-4.6-11.2-4.6C15.3,8.2,8.2,15.3,8.2,24c0,3,0.8,5.9,2.4,8.4L11,33l-1.6,5.8	l6-1.6l0.6,0.3c2.4,1.4,5.2,2.2,8,2.2h0c8.7,0,15.8-7.1,15.8-15.8C39.8,19.8,38.2,15.8,35.2,12.8z"></path><path fill="#fff" fill-rule="evenodd" d="M19.3,16c-0.4-0.8-0.7-0.8-1.1-0.8c-0.3,0-0.6,0-0.9,0	s-0.8,0.1-1.3,0.6c-0.4,0.5-1.7,1.6-1.7,4s1.7,4.6,1.9,4.9s3.3,5.3,8.1,7.2c4,1.6,4.8,1.3,5.7,1.2c0.9-0.1,2.8-1.1,3.2-2.3	c0.4-1.1,0.4-2.1,0.3-2.3c-0.1-0.2-0.4-0.3-0.9-0.6s-2.8-1.4-3.2-1.5c-0.4-0.2-0.8-0.2-1.1,0.2c-0.3,0.5-1.2,1.5-1.5,1.9	c-0.3,0.3-0.6,0.4-1,0.1c-0.5-0.2-2-0.7-3.8-2.4c-1.4-1.3-2.4-2.8-2.6-3.3c-0.3-0.5,0-0.7,0.2-1c0.2-0.2,0.5-0.6,0.7-0.8	c0.2-0.3,0.3-0.5,0.5-0.8c0.2-0.3,0.1-0.6,0-0.8C20.6,19.3,19.7,17,19.3,16z" clip-rule="evenodd"></path>
-</svg>
-  <span class="wa-tooltip">Chat on WhatsApp</span>
-</a>
-<script src="js/script.js"></script>
+  <!-- WHY CHOOSE US -->
+  <section id="why">
+    <div style="max-width:1100px; margin:0 auto; text-align:center;">
+      <div class="section-label" style="justify-content:center;">Why Dhiman</div>
+      <h2 class="section-title" style="max-width:600px; margin:0 auto 24px;">Why Clients <em>Choose Us</em></h2>
+      <div class="divider" style="margin:0 auto 60px;"></div>
+      <div class="why-grid">
+        <div class="why-item fade-in-up">
+          <div class="why-num">01</div>
+          <div class="why-icon">🔧</div>
+          <h3>Skilled Craftsmanship</h3>
+          <p>12+ years of hands-on woodworking experience. We don't just build furniture — we craft heirlooms.</p>
+        </div>
+        <div class="why-item fade-in-up">
+          <div class="why-num">02</div>
+          <div class="why-icon">💎</div>
+          <h3>Premium Materials</h3>
+          <p>Only top-grade plywood, MDF, solid wood and hardware. No compromises on what goes into your home.</p>
+        </div>
+        <div class="why-item fade-in-up">
+          <div class="why-num">03</div>
+          <div class="why-icon">🎨</div>
+          <h3>Fully Custom Designs</h3>
+          <p>From concept to creation, every design is built around your space, your taste and your budget.</p>
+        </div>
+        <div class="why-item fade-in-up">
+          <div class="why-num">04</div>
+          <div class="why-icon">⏰</div>
+          <h3>On-Time Delivery</h3>
+          <p>We respect your timeline. Projects are completed on schedule — every single time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <div style="max-width:1100px; margin:0 auto;">
+      <div class="section-label">Client Stories</div>
+      <h2 class="section-title">What Our Clients <em>Say</em></h2>
+      <div class="divider"></div>
+      <div class="testi-grid">
+        <div class="testi-card fade-in-up">
+          <div class="stars">★★★★★</div>
+          <p class="testi-text">"Dhiman ji transformed our entire living room. The sofa set and TV unit look absolutely
+            stunning — exactly what we imagined, maybe better. Highly recommended!"</p>
+          <div class="testi-author">
+            <div class="testi-avatar">R</div>
+            <div>
+              <div class="testi-name">Ranjit Mehra</div>
+              <div class="testi-loc">📍 Rohini, Delhi</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card fade-in-up">
+          <div class="stars">★★★★★</div>
+          <p class="testi-text">"Got my modular kitchen done last month. The quality is excellent and pricing was very
+            fair. Work was completed on time without any mess. Will definitely call again!"</p>
+          <div class="testi-author">
+            <div class="testi-avatar">P</div>
+            <div>
+              <div class="testi-name">Priya Sharma</div>
+              <div class="testi-loc">📍 Dwarka, Delhi</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card fade-in-up">
+          <div class="stars">★★★★★</div>
+          <p class="testi-text">"Best carpenter in the area, no doubt. My walk-in wardrobe is a dream — every detail is
+            perfect. True artisan. Trust them with your eyes closed."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">A</div>
+            <div>
+              <div class="testi-name">Amit Chaudhary</div>
+              <div class="testi-loc">📍 Noida Sector 62</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card fade-in-up">
+          <div class="stars">★★★★★</div>
+          <p class="testi-text">"We renovated the entire apartment with Dhiman Home Decor. From kitchen to bedrooms —
+            everything is top class. Great communication and flawless execution."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">S</div>
+            <div>
+              <div class="testi-name">Sunita & Ramesh</div>
+              <div class="testi-loc">📍 Gurgaon</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card fade-in-up">
+          <div class="stars">★★★★☆</div>
+          <p class="testi-text">"Got old furniture repaired and polished. It looks brand new now! Very reasonable
+            charges and the work was done neatly. Genuinely happy with the service."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">V</div>
+            <div>
+              <div class="testi-name">Vivek Rathore</div>
+              <div class="testi-loc">📍 Pitampura, Delhi</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-grid">
+      <div class="contact-info fade-in-up">
+        <div class="section-label">Reach Out</div>
+        <h2 class="section-title">Let's Build Something <em>Beautiful</em></h2>
+        <div class="divider"></div>
+        <h3>Get in touch via your preferred channel:</h3>
+        <div class="contact-channels">
+          <a href="https://wa.me/917988320129?text=Hi!%20I'd%20like%20a%20quote%20for%20my%20home%20project."
+            target="_blank" class="channel-btn whatsapp">
+            <span class="channel-icon"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24"
+                viewBox="0 0 48 48">
+                <path fill="#fff"
+                  d="M4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5c5.1,0,9.8,2,13.4,5.6	C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19c0,0,0,0,0,0h0c-3.2,0-6.3-0.8-9.1-2.3L4.9,43.3z">
+                </path>
+                <path fill="#fff"
+                  d="M4.9,43.8c-0.1,0-0.3-0.1-0.4-0.1c-0.1-0.1-0.2-0.3-0.1-0.5L7,33.5c-1.6-2.9-2.5-6.2-2.5-9.6	C4.5,13.2,13.3,4.5,24,4.5c5.2,0,10.1,2,13.8,5.7c3.7,3.7,5.7,8.6,5.7,13.8c0,10.7-8.7,19.5-19.5,19.5c-3.2,0-6.3-0.8-9.1-2.3	L5,43.8C5,43.8,4.9,43.8,4.9,43.8z">
+                </path>
+                <path fill="#cfd8dc"
+                  d="M24,5c5.1,0,9.8,2,13.4,5.6C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19h0c-3.2,0-6.3-0.8-9.1-2.3	L4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5 M24,43L24,43L24,43 M24,43L24,43L24,43 M24,4L24,4C13,4,4,13,4,24	c0,3.4,0.8,6.7,2.5,9.6L3.9,43c-0.1,0.3,0,0.7,0.3,1c0.2,0.2,0.4,0.3,0.7,0.3c0.1,0,0.2,0,0.3,0l9.7-2.5c2.8,1.5,6,2.2,9.2,2.2	c11,0,20-9,20-20c0-5.3-2.1-10.4-5.8-14.1C34.4,6.1,29.4,4,24,4L24,4z">
+                </path>
+                <path fill="#40c351"
+                  d="M35.2,12.8c-3-3-6.9-4.6-11.2-4.6C15.3,8.2,8.2,15.3,8.2,24c0,3,0.8,5.9,2.4,8.4L11,33l-1.6,5.8	l6-1.6l0.6,0.3c2.4,1.4,5.2,2.2,8,2.2h0c8.7,0,15.8-7.1,15.8-15.8C39.8,19.8,38.2,15.8,35.2,12.8z">
+                </path>
+                <path fill="#fff" fill-rule="evenodd"
+                  d="M19.3,16c-0.4-0.8-0.7-0.8-1.1-0.8c-0.3,0-0.6,0-0.9,0	s-0.8,0.1-1.3,0.6c-0.4,0.5-1.7,1.6-1.7,4s1.7,4.6,1.9,4.9s3.3,5.3,8.1,7.2c4,1.6,4.8,1.3,5.7,1.2c0.9-0.1,2.8-1.1,3.2-2.3	c0.4-1.1,0.4-2.1,0.3-2.3c-0.1-0.2-0.4-0.3-0.9-0.6s-2.8-1.4-3.2-1.5c-0.4-0.2-0.8-0.2-1.1,0.2c-0.3,0.5-1.2,1.5-1.5,1.9	c-0.3,0.3-0.6,0.4-1,0.1c-0.5-0.2-2-0.7-3.8-2.4c-1.4-1.3-2.4-2.8-2.6-3.3c-0.3-0.5,0-0.7,0.2-1c0.2-0.2,0.5-0.6,0.7-0.8	c0.2-0.3,0.3-0.5,0.5-0.8c0.2-0.3,0.1-0.6,0-0.8C20.6,19.3,19.7,17,19.3,16z"
+                  clip-rule="evenodd"></path>
+              </svg></span>
+            <div>
+              <div style="font-weight:500;">WhatsApp Chat</div>
+              <div style="font-size:0.75rem;opacity:0.7;margin-top:2px;">+91 79883 20129 — instant reply</div>
+            </div>
+          </a>
+          <a href="mailto:dhimanhomedeocr@gmail.com" class="channel-btn gmail">
+            <span class="channel-icon">✉️</span>
+            <div>
+              <div style="font-weight:500;">Send Email</div>
+              <div style="font-size:0.75rem;opacity:0.7;margin-top:2px;">dhimanhomesdecor@gmail.com</div>
+            </div>
+          </a>
+          <a href="tel:+917988320129" class="channel-btn call">
+            <span class="channel-icon">📞</span>
+            <div>
+              <div style="font-weight:500;">Call Us Directly</div>
+              <div style="font-size:0.75rem;opacity:0.7;margin-top:2px;">+917988320129</div>
+            </div>
+          </a>
+        </div>
+        <div class="social-links">
+          <a href="https://instagram.com" target="_blank" class="social-btn" title="Instagram"><svg
+              viewBox="-2 -2 24.00 24.00" height="24px" width="24px" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" stroke="#000000">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <title>instagram [#167]</title>
+                <desc>Created with Sketch.</desc>
+                <defs> </defs>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g id="Dribbble-Light-Preview" transform="translate(-340.000000, -7439.000000)" fill="#b12525">
+                    <g id="icons" transform="translate(56.000000, 160.000000)">
+                      <path
+                        d="M289.869652,7279.12273 C288.241769,7279.19618 286.830805,7279.5942 285.691486,7280.72871 C284.548187,7281.86918 284.155147,7283.28558 284.081514,7284.89653 C284.035742,7285.90201 283.768077,7293.49818 284.544207,7295.49028 C285.067597,7296.83422 286.098457,7297.86749 287.454694,7298.39256 C288.087538,7298.63872 288.809936,7298.80547 289.869652,7298.85411 C298.730467,7299.25511 302.015089,7299.03674 303.400182,7295.49028 C303.645956,7294.859 303.815113,7294.1374 303.86188,7293.08031 C304.26686,7284.19677 303.796207,7282.27117 302.251908,7280.72871 C301.027016,7279.50685 299.5862,7278.67508 289.869652,7279.12273 M289.951245,7297.06748 C288.981083,7297.0238 288.454707,7296.86201 288.103459,7296.72603 C287.219865,7296.3826 286.556174,7295.72155 286.214876,7294.84312 C285.623823,7293.32944 285.819846,7286.14023 285.872583,7284.97693 C285.924325,7283.83745 286.155174,7282.79624 286.959165,7281.99226 C287.954203,7280.99968 289.239792,7280.51332 297.993144,7280.90837 C299.135448,7280.95998 300.179243,7281.19026 300.985224,7281.99226 C301.980262,7282.98483 302.473801,7284.28014 302.071806,7292.99991 C302.028024,7293.96767 301.865833,7294.49274 301.729513,7294.84312 C300.829003,7297.15085 298.757333,7297.47145 289.951245,7297.06748 M298.089663,7283.68956 C298.089663,7284.34665 298.623998,7284.88065 299.283709,7284.88065 C299.943419,7284.88065 300.47875,7284.34665 300.47875,7283.68956 C300.47875,7283.03248 299.943419,7282.49847 299.283709,7282.49847 C298.623998,7282.49847 298.089663,7283.03248 298.089663,7283.68956 M288.862673,7288.98792 C288.862673,7291.80286 291.150266,7294.08479 293.972194,7294.08479 C296.794123,7294.08479 299.081716,7291.80286 299.081716,7288.98792 C299.081716,7286.17298 296.794123,7283.89205 293.972194,7283.89205 C291.150266,7283.89205 288.862673,7286.17298 288.862673,7288.98792 M290.655732,7288.98792 C290.655732,7287.16159 292.140329,7285.67967 293.972194,7285.67967 C295.80406,7285.67967 297.288657,7287.16159 297.288657,7288.98792 C297.288657,7290.81525 295.80406,7292.29716 293.972194,7292.29716 C292.140329,7292.29716 290.655732,7290.81525 290.655732,7288.98792"
+                        id="instagram-[#167]"> </path>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </svg></a>
+          <a href="https://facebook.com" target="_blank" class="social-btn" title="Facebook"><svg width="24px"
+              height="24px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <title>Facebook-color</title>
+                <desc>Created with Sketch.</desc>
+                <defs> </defs>
+                <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g id="Color-" transform="translate(-200.000000, -160.000000)" fill="#4460A0">
+                    <path
+                      d="M225.638355,208 L202.649232,208 C201.185673,208 200,206.813592 200,205.350603 L200,162.649211 C200,161.18585 201.185859,160 202.649232,160 L245.350955,160 C246.813955,160 248,161.18585 248,162.649211 L248,205.350603 C248,206.813778 246.813769,208 245.350955,208 L233.119305,208 L233.119305,189.411755 L239.358521,189.411755 L240.292755,182.167586 L233.119305,182.167586 L233.119305,177.542641 C233.119305,175.445287 233.701712,174.01601 236.70929,174.01601 L240.545311,174.014333 L240.545311,167.535091 C239.881886,167.446808 237.604784,167.24957 234.955552,167.24957 C229.424834,167.24957 225.638355,170.625526 225.638355,176.825209 L225.638355,182.167586 L219.383122,182.167586 L219.383122,189.411755 L225.638355,189.411755 L225.638355,208 L225.638355,208 Z"
+                      id="Facebook"> </path>
+                  </g>
+                </g>
+              </g>
+            </svg> </a>
+          <a href="https://wa.me/917988320129" target="_blank" class="social-btn" title="WhatsApp"><svg
+              xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 48 48">
+              <path fill="#fff"
+                d="M4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5c5.1,0,9.8,2,13.4,5.6	C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19c0,0,0,0,0,0h0c-3.2,0-6.3-0.8-9.1-2.3L4.9,43.3z">
+              </path>
+              <path fill="#fff"
+                d="M4.9,43.8c-0.1,0-0.3-0.1-0.4-0.1c-0.1-0.1-0.2-0.3-0.1-0.5L7,33.5c-1.6-2.9-2.5-6.2-2.5-9.6	C4.5,13.2,13.3,4.5,24,4.5c5.2,0,10.1,2,13.8,5.7c3.7,3.7,5.7,8.6,5.7,13.8c0,10.7-8.7,19.5-19.5,19.5c-3.2,0-6.3-0.8-9.1-2.3	L5,43.8C5,43.8,4.9,43.8,4.9,43.8z">
+              </path>
+              <path fill="#cfd8dc"
+                d="M24,5c5.1,0,9.8,2,13.4,5.6C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19h0c-3.2,0-6.3-0.8-9.1-2.3	L4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5 M24,43L24,43L24,43 M24,43L24,43L24,43 M24,4L24,4C13,4,4,13,4,24	c0,3.4,0.8,6.7,2.5,9.6L3.9,43c-0.1,0.3,0,0.7,0.3,1c0.2,0.2,0.4,0.3,0.7,0.3c0.1,0,0.2,0,0.3,0l9.7-2.5c2.8,1.5,6,2.2,9.2,2.2	c11,0,20-9,20-20c0-5.3-2.1-10.4-5.8-14.1C34.4,6.1,29.4,4,24,4L24,4z">
+              </path>
+              <path fill="#40c351"
+                d="M35.2,12.8c-3-3-6.9-4.6-11.2-4.6C15.3,8.2,8.2,15.3,8.2,24c0,3,0.8,5.9,2.4,8.4L11,33l-1.6,5.8	l6-1.6l0.6,0.3c2.4,1.4,5.2,2.2,8,2.2h0c8.7,0,15.8-7.1,15.8-15.8C39.8,19.8,38.2,15.8,35.2,12.8z">
+              </path>
+              <path fill="#fff" fill-rule="evenodd"
+                d="M19.3,16c-0.4-0.8-0.7-0.8-1.1-0.8c-0.3,0-0.6,0-0.9,0	s-0.8,0.1-1.3,0.6c-0.4,0.5-1.7,1.6-1.7,4s1.7,4.6,1.9,4.9s3.3,5.3,8.1,7.2c4,1.6,4.8,1.3,5.7,1.2c0.9-0.1,2.8-1.1,3.2-2.3	c0.4-1.1,0.4-2.1,0.3-2.3c-0.1-0.2-0.4-0.3-0.9-0.6s-2.8-1.4-3.2-1.5c-0.4-0.2-0.8-0.2-1.1,0.2c-0.3,0.5-1.2,1.5-1.5,1.9	c-0.3,0.3-0.6,0.4-1,0.1c-0.5-0.2-2-0.7-3.8-2.4c-1.4-1.3-2.4-2.8-2.6-3.3c-0.3-0.5,0-0.7,0.2-1c0.2-0.2,0.5-0.6,0.7-0.8	c0.2-0.3,0.3-0.5,0.5-0.8c0.2-0.3,0.1-0.6,0-0.8C20.6,19.3,19.7,17,19.3,16z"
+                clip-rule="evenodd"></path>
+            </svg></a>
+        </div>
+        <div class="map-placeholder">
+          <div class="map-icon">📍</div>
+          <div style="font-weight:500; color:var(--beige-light);">Dhiman Home Decor Workshop</div>
+          <div style="font-size:0.78rem; opacity:0.6;">Delhi NCR — Serving Pan Delhi, Noida, Gurgaon</div>
+          <div style="font-size:0.75rem; color:var(--gold); margin-top:6px; position:relative; z-index:1;">Click to open
+            in Maps ↗</div>
+        </div>
+      </div>
+      <div class="fade-in-up">
+        <div
+          style="background:var(--glass); border:1px solid var(--glass-border); border-radius:8px; padding:44px; backdrop-filter:blur(16px);">
+          <h3
+            style="font-family:var(--font-display); font-size:1.6rem; font-weight:400; color:var(--cream); margin-bottom:8px;">
+            Send a Message</h3>
+          <p style="font-size:0.83rem; color:var(--beige); margin-bottom:32px; font-weight:300;">We'll get back to you
+            within a few hours.</p>
+          <form class="contact-form" action="https://formspree.io/f/meenarqa" method="POST">
+
+            <!-- Honeypot (anti-spam) -->
+            <input type="text" name="_gotcha" style="display:none">
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>Your Name</label>
+                <input type="text" name="name" placeholder="Rajesh Kumar" required>
+              </div>
+
+              <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" name="phone" placeholder="+91 9876543210" required
+                  pattern="^(\+91[\-\s]?)?[6-9]\d{9}$"
+                  title="Enter a valid Indian number ">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Service Required</label>
+              <select name="service" required>
+                <option value="">Select a service...</option>
+                <option value="furniture">Custom Furniture</option>
+                <option value="kitchen">Modular Kitchen</option>
+                <option value="wardrobe">Wardrobe & Cabinets</option>
+                <option value="interior">Interior Woodwork</option>
+                <option value="repair">Repair & Polishing</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Your Message</label>
+              <textarea name="message" rows="5" placeholder="Tell us about your project..."></textarea>
+            </div>
+
+            <!-- Optional redirect -->
+            <input type="hidden" name="_redirect" value="thankyou.html">
+
+            <button type="submit" class="submit-btn">Send Enquiry →</button>
+          </form>
+
+          <div id="formSuccess"
+            style="display:none; background:rgba(37,211,102,0.1); border:1px solid rgba(37,211,102,0.3); border-radius:6px; padding:20px; margin-top:20px; color:#4ade80; text-align:center;">
+            ✅ Message sent! We'll contact you within a few hours.
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#" class="logo">Dhiman <span>Home Decor</span></a>
+        <p class="footer-tagline">"Turning Wood into Art"</p>
+        <p class="footer-desc">Premium custom furniture and interior woodwork for homes across Delhi NCR. Every piece
+          crafted with passion, precision and pride.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Custom Furniture</a></li>
+          <li><a href="#services">Modular Kitchen</a></li>
+          <li><a href="#services">Wardrobes</a></li>
+          <li><a href="#services">Interior Woodwork</a></li>
+          <li><a href="#services">Repair & Polish</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+917988320129">📞 +91 79883 20129</a></li>
+          <li><a href="https://wa.me/917988320129" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" x="0px"
+                y="0px" width="15" height="15" viewBox="0 0 48 48">
+                <path fill="#fff"
+                  d="M4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5c5.1,0,9.8,2,13.4,5.6	C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19c0,0,0,0,0,0h0c-3.2,0-6.3-0.8-9.1-2.3L4.9,43.3z">
+                </path>
+                <path fill="#fff"
+                  d="M4.9,43.8c-0.1,0-0.3-0.1-0.4-0.1c-0.1-0.1-0.2-0.3-0.1-0.5L7,33.5c-1.6-2.9-2.5-6.2-2.5-9.6	C4.5,13.2,13.3,4.5,24,4.5c5.2,0,10.1,2,13.8,5.7c3.7,3.7,5.7,8.6,5.7,13.8c0,10.7-8.7,19.5-19.5,19.5c-3.2,0-6.3-0.8-9.1-2.3	L5,43.8C5,43.8,4.9,43.8,4.9,43.8z">
+                </path>
+                <path fill="#cfd8dc"
+                  d="M24,5c5.1,0,9.8,2,13.4,5.6C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19h0c-3.2,0-6.3-0.8-9.1-2.3	L4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5 M24,43L24,43L24,43 M24,43L24,43L24,43 M24,4L24,4C13,4,4,13,4,24	c0,3.4,0.8,6.7,2.5,9.6L3.9,43c-0.1,0.3,0,0.7,0.3,1c0.2,0.2,0.4,0.3,0.7,0.3c0.1,0,0.2,0,0.3,0l9.7-2.5c2.8,1.5,6,2.2,9.2,2.2	c11,0,20-9,20-20c0-5.3-2.1-10.4-5.8-14.1C34.4,6.1,29.4,4,24,4L24,4z">
+                </path>
+                <path fill="#40c351"
+                  d="M35.2,12.8c-3-3-6.9-4.6-11.2-4.6C15.3,8.2,8.2,15.3,8.2,24c0,3,0.8,5.9,2.4,8.4L11,33l-1.6,5.8	l6-1.6l0.6,0.3c2.4,1.4,5.2,2.2,8,2.2h0c8.7,0,15.8-7.1,15.8-15.8C39.8,19.8,38.2,15.8,35.2,12.8z">
+                </path>
+                <path fill="#fff" fill-rule="evenodd"
+                  d="M19.3,16c-0.4-0.8-0.7-0.8-1.1-0.8c-0.3,0-0.6,0-0.9,0	s-0.8,0.1-1.3,0.6c-0.4,0.5-1.7,1.6-1.7,4s1.7,4.6,1.9,4.9s3.3,5.3,8.1,7.2c4,1.6,4.8,1.3,5.7,1.2c0.9-0.1,2.8-1.1,3.2-2.3	c0.4-1.1,0.4-2.1,0.3-2.3c-0.1-0.2-0.4-0.3-0.9-0.6s-2.8-1.4-3.2-1.5c-0.4-0.2-0.8-0.2-1.1,0.2c-0.3,0.5-1.2,1.5-1.5,1.9	c-0.3,0.3-0.6,0.4-1,0.1c-0.5-0.2-2-0.7-3.8-2.4c-1.4-1.3-2.4-2.8-2.6-3.3c-0.3-0.5,0-0.7,0.2-1c0.2-0.2,0.5-0.6,0.7-0.8	c0.2-0.3,0.3-0.5,0.5-0.8c0.2-0.3,0.1-0.6,0-0.8C20.6,19.3,19.7,17,19.3,16z"
+                  clip-rule="evenodd"></path>
+              </svg> WhatsApp</a></li>
+          <li><a href="mailto:dhimanhomesdecor@gmail.com"><svg width="15px" height="15px" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <g id="style=linear">
+                    <g id="email">
+                      <path id="vector"
+                        d="M17 20.5H7C4 20.5 2 19 2 15.5V8.5C2 5 4 3.5 7 3.5H17C20 3.5 22 5 22 8.5V15.5C22 19 20 20.5 17 20.5Z"
+                        stroke="#a20606" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                      <path id="vector_2"
+                        d="M18.7698 7.7688L13.2228 12.0551C12.5025 12.6116 11.4973 12.6116 10.777 12.0551L5.22998 7.7688"
+                        stroke="#a20606" stroke-width="1.5" stroke-linecap="round"></path>
+                    </g>
+                  </g>
+                </g>
+              </svg> Email Us</a></li>
+          <li><a href="https://instagram.com" target="_blank"><svg viewBox="-2 -2 24.00 24.00" height="15px"
+                width="15px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                fill="#000000" stroke="#000000">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <title>instagram [#167]</title>
+                  <desc>Created with Sketch.</desc>
+                  <defs> </defs>
+                  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="Dribbble-Light-Preview" transform="translate(-340.000000, -7439.000000)" fill="#b12525">
+                      <g id="icons" transform="translate(56.000000, 160.000000)">
+                        <path
+                          d="M289.869652,7279.12273 C288.241769,7279.19618 286.830805,7279.5942 285.691486,7280.72871 C284.548187,7281.86918 284.155147,7283.28558 284.081514,7284.89653 C284.035742,7285.90201 283.768077,7293.49818 284.544207,7295.49028 C285.067597,7296.83422 286.098457,7297.86749 287.454694,7298.39256 C288.087538,7298.63872 288.809936,7298.80547 289.869652,7298.85411 C298.730467,7299.25511 302.015089,7299.03674 303.400182,7295.49028 C303.645956,7294.859 303.815113,7294.1374 303.86188,7293.08031 C304.26686,7284.19677 303.796207,7282.27117 302.251908,7280.72871 C301.027016,7279.50685 299.5862,7278.67508 289.869652,7279.12273 M289.951245,7297.06748 C288.981083,7297.0238 288.454707,7296.86201 288.103459,7296.72603 C287.219865,7296.3826 286.556174,7295.72155 286.214876,7294.84312 C285.623823,7293.32944 285.819846,7286.14023 285.872583,7284.97693 C285.924325,7283.83745 286.155174,7282.79624 286.959165,7281.99226 C287.954203,7280.99968 289.239792,7280.51332 297.993144,7280.90837 C299.135448,7280.95998 300.179243,7281.19026 300.985224,7281.99226 C301.980262,7282.98483 302.473801,7284.28014 302.071806,7292.99991 C302.028024,7293.96767 301.865833,7294.49274 301.729513,7294.84312 C300.829003,7297.15085 298.757333,7297.47145 289.951245,7297.06748 M298.089663,7283.68956 C298.089663,7284.34665 298.623998,7284.88065 299.283709,7284.88065 C299.943419,7284.88065 300.47875,7284.34665 300.47875,7283.68956 C300.47875,7283.03248 299.943419,7282.49847 299.283709,7282.49847 C298.623998,7282.49847 298.089663,7283.03248 298.089663,7283.68956 M288.862673,7288.98792 C288.862673,7291.80286 291.150266,7294.08479 293.972194,7294.08479 C296.794123,7294.08479 299.081716,7291.80286 299.081716,7288.98792 C299.081716,7286.17298 296.794123,7283.89205 293.972194,7283.89205 C291.150266,7283.89205 288.862673,7286.17298 288.862673,7288.98792 M290.655732,7288.98792 C290.655732,7287.16159 292.140329,7285.67967 293.972194,7285.67967 C295.80406,7285.67967 297.288657,7287.16159 297.288657,7288.98792 C297.288657,7290.81525 295.80406,7292.29716 293.972194,7292.29716 C292.140329,7292.29716 290.655732,7290.81525 290.655732,7288.98792"
+                          id="instagram-[#167]"> </path>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </svg> Instagram </a></li>
+          <li><a href="https://facebook.com" target="_blank"><svg width="15px" height="15px" viewBox="0 0 48 48"
+                version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                fill="#000000">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <title>Facebook-color</title>
+                  <desc>Created with Sketch.</desc>
+                  <defs> </defs>
+                  <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="Color-" transform="translate(-200.000000, -160.000000)" fill="#4460A0">
+                      <path
+                        d="M225.638355,208 L202.649232,208 C201.185673,208 200,206.813592 200,205.350603 L200,162.649211 C200,161.18585 201.185859,160 202.649232,160 L245.350955,160 C246.813955,160 248,161.18585 248,162.649211 L248,205.350603 C248,206.813778 246.813769,208 245.350955,208 L233.119305,208 L233.119305,189.411755 L239.358521,189.411755 L240.292755,182.167586 L233.119305,182.167586 L233.119305,177.542641 C233.119305,175.445287 233.701712,174.01601 236.70929,174.01601 L240.545311,174.014333 L240.545311,167.535091 C239.881886,167.446808 237.604784,167.24957 234.955552,167.24957 C229.424834,167.24957 225.638355,170.625526 225.638355,176.825209 L225.638355,182.167586 L219.383122,182.167586 L219.383122,189.411755 L225.638355,189.411755 L225.638355,208 L225.638355,208 Z"
+                        id="Facebook"> </path>
+                    </g>
+                  </g>
+                </g>
+              </svg> Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Dhiman Home Decor. All rights reserved.</span>
+      <span>Carpenter Near Me | Custom Furniture Delhi | Modular Kitchen NCR</span>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/917988320129?text=Hello!%20I'm%20interested%20in%20your%20woodwork%20services." target="_blank"
+    class="wa-float">
+    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 48 48">
+      <path fill="#fff"
+        d="M4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5c5.1,0,9.8,2,13.4,5.6	C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19c0,0,0,0,0,0h0c-3.2,0-6.3-0.8-9.1-2.3L4.9,43.3z">
+      </path>
+      <path fill="#fff"
+        d="M4.9,43.8c-0.1,0-0.3-0.1-0.4-0.1c-0.1-0.1-0.2-0.3-0.1-0.5L7,33.5c-1.6-2.9-2.5-6.2-2.5-9.6	C4.5,13.2,13.3,4.5,24,4.5c5.2,0,10.1,2,13.8,5.7c3.7,3.7,5.7,8.6,5.7,13.8c0,10.7-8.7,19.5-19.5,19.5c-3.2,0-6.3-0.8-9.1-2.3	L5,43.8C5,43.8,4.9,43.8,4.9,43.8z">
+      </path>
+      <path fill="#cfd8dc"
+        d="M24,5c5.1,0,9.8,2,13.4,5.6C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19h0c-3.2,0-6.3-0.8-9.1-2.3	L4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5 M24,43L24,43L24,43 M24,43L24,43L24,43 M24,4L24,4C13,4,4,13,4,24	c0,3.4,0.8,6.7,2.5,9.6L3.9,43c-0.1,0.3,0,0.7,0.3,1c0.2,0.2,0.4,0.3,0.7,0.3c0.1,0,0.2,0,0.3,0l9.7-2.5c2.8,1.5,6,2.2,9.2,2.2	c11,0,20-9,20-20c0-5.3-2.1-10.4-5.8-14.1C34.4,6.1,29.4,4,24,4L24,4z">
+      </path>
+      <path fill="#40c351"
+        d="M35.2,12.8c-3-3-6.9-4.6-11.2-4.6C15.3,8.2,8.2,15.3,8.2,24c0,3,0.8,5.9,2.4,8.4L11,33l-1.6,5.8	l6-1.6l0.6,0.3c2.4,1.4,5.2,2.2,8,2.2h0c8.7,0,15.8-7.1,15.8-15.8C39.8,19.8,38.2,15.8,35.2,12.8z">
+      </path>
+      <path fill="#fff" fill-rule="evenodd"
+        d="M19.3,16c-0.4-0.8-0.7-0.8-1.1-0.8c-0.3,0-0.6,0-0.9,0	s-0.8,0.1-1.3,0.6c-0.4,0.5-1.7,1.6-1.7,4s1.7,4.6,1.9,4.9s3.3,5.3,8.1,7.2c4,1.6,4.8,1.3,5.7,1.2c0.9-0.1,2.8-1.1,3.2-2.3	c0.4-1.1,0.4-2.1,0.3-2.3c-0.1-0.2-0.4-0.3-0.9-0.6s-2.8-1.4-3.2-1.5c-0.4-0.2-0.8-0.2-1.1,0.2c-0.3,0.5-1.2,1.5-1.5,1.9	c-0.3,0.3-0.6,0.4-1,0.1c-0.5-0.2-2-0.7-3.8-2.4c-1.4-1.3-2.4-2.8-2.6-3.3c-0.3-0.5,0-0.7,0.2-1c0.2-0.2,0.5-0.6,0.7-0.8	c0.2-0.3,0.3-0.5,0.5-0.8c0.2-0.3,0.1-0.6,0-0.8C20.6,19.3,19.7,17,19.3,16z"
+        clip-rule="evenodd"></path>
+    </svg>
+    <span class="wa-tooltip">Chat on WhatsApp</span>
+  </a>
+  <script src="js/script.js"></script>
 </body>
+
 </html>

@@ -83,8 +83,24 @@
   }
 
     // Form submit
-    function handleForm(e) {
-        e.preventDefault();
-    document.getElementById('formSuccess').style.display='block';
-    e.target.style.display='none';
+    const form = document.querySelector(".contact-form");
+const successBox = document.getElementById("formSuccess");
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const data = new FormData(form);
+
+  const response = await fetch(form.action, {
+    method: "POST",
+    body: data,
+    headers: { 'Accept': 'application/json' }
+  });
+
+  if (response.ok) {
+    form.reset();
+    successBox.style.display = "block";
+  } else {
+    alert("Something went wrong. Try again.");
   }
+});
